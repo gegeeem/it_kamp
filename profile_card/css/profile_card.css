@@ -22,10 +22,25 @@
     display: block;
     width: 140px;
     height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px;
+}
+.img-name h2{
+    text-align: center;
 }
 .followers{
     height: 100px;
 }
+.followers h3{
+    text-align: center;
+}
 .button-follow{
     height: 100px;
+}
+.button-follow  button{
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
