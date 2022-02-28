@@ -1,0 +1,16 @@
+*{
+    font-family: 'Roboto', sans-serif;;
+}
+.ikonica{
+    background-color: aqua;
+    color: bisque;
+    font-size: 300px;
+}
+#druga-baterija{
+    color: blueviolet;
+    font-size: 150px;
+    background-color:white;
+}
+p{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
