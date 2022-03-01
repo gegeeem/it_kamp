@@ -61,7 +61,7 @@ body{
     border-radius: 50%;
 }
 .makeStyles-icon-157 {
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .MuiSvgIcon-root {
     fill: white;
@@ -73,6 +73,6 @@ body{
     flex-shrink: 0;
     -moz-user-select: none;
     background-color: rgb(54, 38, 92);
-    color: white !important;
+   
     
   }
