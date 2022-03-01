@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.card{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    height: 520px;
+}
