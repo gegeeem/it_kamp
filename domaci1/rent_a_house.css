@@ -1,11 +1,78 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-size: 26px;
+    color: rgb(54, 38, 92);
+    font-family: 'Cabin', sans-serif;
+}
+body{
+    background-color: rgba(230, 231, 239, 255)
 }
 .card{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
     width: 330px;
-    height: 520px;
+    height: 540px;
+    background-color: #f5f6f5ff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border: 12px solid #f5f6f5ff;
 }
+.img{
+    width: 100%;
+    height: 220px;
+    
+}
+.img img{
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 100%;
+
+}
+.description{
+    height: 298px;
+    background-color:rgb(253, 253, 253);
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.description > :first-child{
+    border-bottom: 3px solid rgb(54, 38, 92);
+    
+}
+.description div {
+    padding: 8px;
+}
+.description > div > i{
+    font-size: 32px;
+
+}
+/*.description > :last-child{
+    border-top:5px solid rgb(100, 91, 121);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}*/
+.ikonica{
+    width: 60px;
+    //*background-image: url(https://img.icons8.com/dotty/80/000000/empty-bed.png);*/
+    border-radius: 50%;
+}
+.makeStyles-icon-157 {
+    margin-right: 20px;
+  }
+  .MuiSvgIcon-root {
+    fill: white;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    font-size: 3rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    -moz-user-select: none;
+    background-color: rgb(54, 38, 92);
+    color: white !important;
+    
+  }
