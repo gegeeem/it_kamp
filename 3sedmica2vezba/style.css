@@ -1,0 +1,18 @@
+span{
+    display: block;
+
+}
+div{
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+
+}
+.ne{
+    display: none;
+}
+.sakrij{
+    visibility: hidden;/*sakriva element ali ostavlja prazan prostor na stranicibrauyera*/
+}
+/*sledece vezbe jednice rem, em,*/
+/*nasledjivanje osobina property*/
