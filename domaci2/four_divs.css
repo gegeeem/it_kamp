@@ -5,19 +5,35 @@
 
 .first_div, .second_div{
     display: inline-block;
-    width: 40%;
-    height: 500px;
+    width: 49%;
+    height: 800px;
     font-size: 0;
-    margin-bottom: -4px;
-    border: 2px solid;
+    
+    /*border: 2px solid;*/
 }
-
+.right, .left, .second_left, .second_right{
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+.right{
+    background-color: antiquewhite;
+}
+.left{
+    background-color: azure;
+}
+.second_left{
+    background-color: rgb(199, 176, 146);
+}
+.second_right{
+    background-color: rgb(185, 173, 157);
+}
 .card{
     width: 200px;
     height: 300px;
     
    border: 2px solid;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     
