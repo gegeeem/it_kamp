@@ -27,5 +27,14 @@
     height: 65vh;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    margin
+}
+.description{
+    width: 50vh;
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+.description > h2{
+    text-align: center;
+   font-size: 5vh;
 }
