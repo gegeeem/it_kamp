@@ -1,10 +1,11 @@
 *{
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 .ikonica{
     background-color: aqua;
     color: bisque;
     font-size: 300px;
+    border-radius: 50%;
 }
 #druga-baterija{
     color: blueviolet;
