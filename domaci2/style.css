@@ -54,7 +54,9 @@ img:first-child{
 }
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 .ikonica{
     
