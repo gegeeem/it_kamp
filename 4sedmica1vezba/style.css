@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+.navbar{
+    height: 10vh;
+    background-color: orange;
+    top: 0;
+    position: sticky;/*sticky zavisi od skrola*/
+}
+.section{
+    height:100vh;
+    background-color: rgb(247, 210, 162);
+   
+}
+.footer{
+    height: 10vh;
+    width: 100%; /*obavezno kod pozicioniranja*/
+    background-color: orange;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+.relative{
+    position: relative; /*naglasavamo duzinu kod relativa valjda*/
+    width: 50%;
+    height: 20vh;
+    background-color: rgb(56, 45, 45);
+    margin: 0 auto;
+}
+.absolute{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: bisque;
+    top: 20vh;
+    right: -5px;
+}
