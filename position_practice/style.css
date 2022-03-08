@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    height: 200vh;
+    background-color: rgb(224, 238, 250);
+}
+.sticky{
+    display: flex;
+    flex: 0 1 auto;
+    align-items:center;
+    justify-content: center;
+    position: fixed;
+    top:70vh;
+    bottom: 5vh;
+    left: 70vw;
+    right: 5vh;
+    background-color: rgb(140, 180, 214);
+    border-radius: 12px;
+}
+.parent_absolute{
+    position: relative;
+    width: 15%;
+    height: 100%;
+    
+}
+.absolute{
+    position: absolute;
+    top: 18%;
+    left: -100%;
+    width: 200%;
+    height: 64%;
+    /* background-color: rgb(152, 168, 184); */
+    border-radius: 50%;
+    background-image: url("images/avatar.png");
+    overflow: hidden;
+}
+.absolute > img{
+    display: block;
+    width: 100%;
+}
+.desciption{
+    width: 85%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+
+}
+.desciption > h1{
+    color: rgb(18, 89, 155);
+    margin-left: 8vh;
+}
