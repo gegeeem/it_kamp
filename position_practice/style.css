@@ -13,24 +13,25 @@
     justify-content: center;
     position: fixed;
     top:70vh;
-    bottom: 5vh;
-    left: 70vw;
+   width: 30vw;
+   height: 10vw;
     right: 5vh;
-    background-color: rgb(140, 180, 214);
+    background-color: rgb(128, 176, 231);
     border-radius: 12px;
 }
 .parent_absolute{
     position: relative;
-    width: 15%;
+    width: 12%;
     height: 100%;
+   
     
 }
 .absolute{
     position: absolute;
-    top: 18%;
+    top: 15%;
     left: -100%;
     width: 200%;
-    height: 64%;
+    height: 70%;
     /* background-color: rgb(152, 168, 184); */
     border-radius: 50%;
     background-image: url("images/avatar.png");
@@ -41,13 +42,50 @@
     width: 100%;
 }
 .desciption{
-    width: 85%;
-    height: 80%;
+    width: 88%;
+    height: 100%;
     display: flex;
     align-items: center;
 
 }
 .desciption > h1{
     color: rgb(18, 89, 155);
-    margin-left: 8vh;
+    margin-left: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+.x{
+    position: absolute;
+    top:-3px;
+    right: -2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+   
+}
+#m1{
+    color: rgb(18, 66, 107);
+    font-size: 30px;
+
+}
+#m1:hover{
+    color: rgb(238, 40, 40);
+    font-size: 2.3vw;
+}
+@media only screen and (max-width: 800px) {
+    .desciption>h1{
+        font-size: 19px;
+    }
+    .x{
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+
+    }
+    #m1{
+        font-size: 20px;
+    }
+    
 }
