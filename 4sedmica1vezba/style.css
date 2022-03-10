@@ -10,7 +10,7 @@
     position: sticky;/*sticky zavisi od skrola*/
 }
 .section{
-    height:100vh;
+    height:50vh;
     background-color: rgb(247, 210, 162);
    
 }

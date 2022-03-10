@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #E5E3C9;
 }
 .nav{
     height: 10vh;
@@ -32,6 +33,7 @@ text-align: center;
     position: relative;
     width: 300px;
     height: 250px;
+    margin-top: 10px;
     
 }
 .card>img{
@@ -42,7 +44,7 @@ text-align: center;
     height: 150px;
     width: 280px;
     overflow: hidden;
-
+}
 .popust{
     position: absolute;
     background-color: red;
@@ -55,6 +57,9 @@ text-align: center;
     justify-content: space-evenly;
     height: 40vh;
     background-color: rgb(180, 207, 176);
+}
+.autor1, .autor2, .autor3{
+    margin-top: 10px;
 }
 .footer{
     height: 10vh;
