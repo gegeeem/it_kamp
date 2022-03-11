@@ -80,7 +80,8 @@
 }
 .img-description{
     text-align: center;
-    padding-top: 10px;
+    padding-top: 8px;
+    height: 5vh;
 }
 .product1{
     display: inline-block;
