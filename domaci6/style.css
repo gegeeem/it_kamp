@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    width: 100%;
+    height: 86px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+.container-nav{
+   padding-left: 0.75rem;
+   padding-right: 0.75rem;
+   width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+    
+}
+.logo a{
+    text-decoration: none;
+}
+.logo span{
+    color: #106eea;
+    font-family: "Poppins", sans-serif;
+}
+.nav{
+    display: flex;
+    align-items: center;
+
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+}
+.nav li{
+    list-style-type: none;
+    padding: 10px 0 10px 28px;
+}
+
+
+/* hero */
+.hero{
+    width: 100%;
+    height: 75vh;
+    background-image: url("/domaci5/images/hero-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container{
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+}
+.media a{
+    text-decoration: none;
+}
+.media > .btn{
+    display: inline-block;
+    background-color: #247cf0;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 28px;
+    border-radius: 4px;
+}
+#play_video{
+    color: #247cf0;
+    font-size: 42px;
+}
+.play_video_link{
+    padding: 10px 28px;
+}
+/* en hero */
+.title{
+    
+}
+.title > h1{
+    font-size: 48px;
+    font-weight: 700px;
+    padding: 8px 20px;
+}
+.title span{
+    color: #106eea;
+}
+/* end hero */
+.team{
+    width: 100%;
+    background-color: #f6f9fe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team > h2{
+    font-size: 13px;
+    padding: 8px 20px;
+    color: #106eea;
+    display: inline-block;
+    background: #e7f1fd;
+    border-radius: 50px;
+}
+.team-cards{
+    width: 1140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.team-cards > .card{
+    width: 20%;
+    height: 300px;
+    background-color: #106eea;
+    border-radius: 8px;
+}
+.hamburger{
+    display: none;
+}
+nav > input[type="checkbox"]{
+    display: none;
+}
+/* navigation */
+@media screen and (max-width: 700px) {
+    header{
+        position: fixed;
+        min-height: 86px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:  #fff;
+    }
+    .container-nav{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container-nav a{
+        text-decoration: none;
+    }
+    nav{
+        /* display: none; */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 30px;
+    }
+    nav>.links{
+        /* background: #fff; */
+        display: none;
+    }
+    nav > .links>ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        width:100vw;
+        z-index: 2;
+        list-style-type: none;
+        font-size: 30px;
+        top: -20px;
+        right: 0px;
+        background: #fff;
+        padding-top: 60px;
+    }
+    
+        /* hamburger menu */
+        .hamburger{
+            display: block;
+            position: relative;
+        }
+        .btn-hamburger{
+            font-size: 28px;
+            background-color: #fff;
+            position: absolute;
+        }
+        .btn-close{
+            font-size: 30px;
+            background-color: #fff;
+        }
+        input[type="checkbox"]{
+            display: block;
+            position: absolute;
+            z-index: -3;
+        }
+        input[type="checkbox"]:checked ~ .hamburger>label>.btn-hamburger{
+            display: none;
+        }
+        input[type="checkbox"]:checked ~ .hamburger>label>.btn-close{
+            position: absolute;
+            top: -16px;
+            left: -5px;
+            z-index: 10;
+            
+        }
+        input[type="checkbox"]:checked ~ .links{
+           display: block;
+          
+    
+        }
+    
+        
+        /* end hamburger menu */
+    /* end navigation */
+    
+}
