@@ -1,0 +1,443 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+@font-face {
+    font-family: "Dm Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2");
+}
+@font-face { font-family: "Quicksand"; src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-wg.woff2");}
+@font-face {
+    font-family:"Quicksand" ;
+    src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58a-wg.woff2");
+}
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2");
+}
+@font-face {
+    font-family: "DM Sans Regular";
+    src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
+}
+
+body{
+    margin: 0;
+    font-family: "DM Sans",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+/* header */
+header{
+    position:sticky;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    z-index: 5;
+    background-color: #fff;
+}
+.main-header{
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order > a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Quicksand",sans-serif;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    background-size: 200%;
+    border-radius: 30px;
+    padding: 13px 37px;
+    text-transform: capitalize;
+}
+.mobile-menu{
+    /* display: none; */
+}
+/* end header */
+/* main section */
+main{
+    
+}
+.container{
+    position: relative;
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #d83e06;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 150px;
+}
+.container > h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    font-family: 'Quicksand',sans-serif;
+}
+.container > .delicious{
+    position: absolute;
+    left: -20px;
+    top: -0;
+}
+.delicious > h2{
+    font-size: 79px;
+    font-family: "Lobster",cursive;
+    color: rgba(240,69,6,.06);
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+.explore-btn > a{
+    font-size: 22px;
+    font-weight: 400;
+    padding: 15px 45px;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    font-family: "DM Sans", sans-serif;
+}
+    /* button for all */
+    .btn{
+        color: #fff;
+        border-radius: 30px;
+        display: inline-block;
+        background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+        font-family: "DM Sans", sans-serif;
+        
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        display: inline-block;
+        background-size: 200%;
+        transition: .6s;
+        background-color: transparent;
+    }
+    /* end button for all */
+
+
+/* most popular */
+.most-popular{
+    overflow: hidden;
+}
+    .justify-align > h1{
+        display: block;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: "Quicksand",sans-serif;
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+    }
+/* end most popular */
+
+/* end main section */
+
+/* our features */
+.features-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* end our fetures */
+
+
+@media only screen and (max-width: 575px) {
+    @font-face {
+        font-family: "DM Sans";
+        src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
+    }
+    
+    .container-menu{
+        position: relative;
+    }
+    .mobile-menu{
+        padding: 15px;
+        position: absolute;
+        bottom: -48px;
+        width: 100%;
+        z-index: 99;
+        background-color: antiquewhite;
+    }
+    .container{
+        min-height: 450px;
+    }
+    /* most popular */
+        .most-popular{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .container-popular{
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .justify-align{
+            text-align: center;
+            margin-bottom: 60px;
+            line-height: 60%;
+        }
+        .justify-align > span{
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            font-family: "DM Sans",sans-serif;
+            display: inline-block;
+            color: #f04506;
+            letter-spacing: .2em;
+           
+        }
+        .justify-align > h2{
+            display: block;
+            font-size: 23px;
+            
+        }
+        /* kartice sa kolacima */
+        .slider-cake{
+            overflow: auto;
+            display: flex;
+            gap:20px;
+            
+        }
+        .cake-card{
+            flex:1 0 calc(100vw - 2*15px);
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            background-color:  #fff5f2;
+            padding: 20px;
+            border-bottom-right-radius: 60px;
+            margin-bottom: 40px;
+        }
+        .img-container{
+            border-bottom-right-radius: 40px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .img-container > img{
+            width: 100%;
+        }
+        .description-cake{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .description-cake > h4{
+            font-family: "Quicksand",sans-serif, url(https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2);
+            color: #000;
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom:0 ;
+        }
+        .description-cake > a{
+            font-family: "Quicksand Light Regular",sans-serif;
+            border: none;
+            padding: 13px 37px;
+        }
+        .description-cake > p{
+            font-size: 16px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            font-weight: 400;
+            padding: 0 30px;
+        }
+        /* kraj kartice sa kolacima */
+    /* end most popular */
+
+    /* Our story */
+    .container-popular-img{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    .container-img{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container-img > img{
+        width: 100%;
+        object-fit: cover;
+        /* object-position: -20px 0px; */
+    }
+    .about-our-story{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .head-our-story{
+        margin-bottom: 30px;
+    }
+    .head-our-story > span{
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .head-our-story > p{
+        font-size: 23px;
+        margin-bottom: 30px;
+        font-family: "Quicksand",sans-serif;
+        color: #000;
+        margin-top: 0;
+        font-style: normal;
+    }
+    .text-btn{
+        padding: 13px 37px;
+    }
+    .text-btn>p{
+        font-family: "DM Sans",sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        margin-top: 0px;
+        line-height: 30px;
+    }
+    .text-btn>a{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Quicksand",sans-serif;
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        padding: 13px 37px;
+    }
+    /* end our story */
+
+    /* Our Features */
+    .features{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #fff5f2;;
+    }
+    .container-features{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    .header-features{
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .header-features span{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .header-features h2{
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 47px 17px;
+    }
+    .desciption-card{
+        padding: 0px 16px;
+        text-align: center;
+    }
+    .desciption-card  a{
+        font-family: "Quicksand",sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .desciption-card > p{
+        font-family: "DM Sans",sans-serif;
+        color: #000;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    /* end Our Features */
+
+    /* video */
+    .video{
+        width: 100%;
+        height: 300px;
+        background-image: url("/images/background\ video.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .icon-video a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-video  i{
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        color: #ff9f67;
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+    }
+    /* end video */
+    /* Client say */
+    .client-say{
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .client-say-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .client-say-title span{
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .client-say-title h2{
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    /* end client say */
+    
+}
