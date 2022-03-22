@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 @font-face {
     font-family: "Dm Sans";
@@ -531,9 +532,30 @@ main{
 
 
     /* Fooeter */
+    footer{
+        background-color: #FFF5F2;
+    }
     .ftr{ /*dodatna klasa u samom containeru-feature*/
         padding-top: 80px;
         padding-bottom: 20px;
+    }
+
+    .ftr-lg{
+        margin-bottom: 35px;
+    }
+    .social-network > p{
+        color: #5E5E5E;
+        font-size: 16px;
+        margin-bottom: 21px;
+    }
+    .social-footer i{
+        padding: 9px;
+        color: #d83e06;
+        font-size: 24px;
+    }
+    .copyrights{
+        text-align: center;
+        padding: 0 10px;
     }
     
 }
