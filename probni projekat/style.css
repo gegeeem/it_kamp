@@ -158,7 +158,7 @@ main{
 
 
 @media only screen and (max-width: 575px) {
-    /* @font-face {
+    @font-face {
         font-family: "DM Sans";
         src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
     }
@@ -169,7 +169,10 @@ main{
     @font-face {
         font-family: "Lobster";
         src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
-    } */
+    }
+    h4{
+        font-family: "Quicksand", sans-serif;
+    }
 
     .container-menu{
         position: relative;
@@ -534,6 +537,18 @@ main{
     /* Fooeter */
     footer{
         background-color: #FFF5F2;
+        font-family: "DM Sans",sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        color: #5E5E5E;
+    }
+    footer a{
+        font-family: "DM Sans",sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        color: #5E5E5E;
     }
     .ftr{ /*dodatna klasa u samom containeru-feature*/
         padding-top: 80px;
@@ -557,5 +572,19 @@ main{
         text-align: center;
         padding: 0 10px;
     }
-    
+
+    .lnks-ftr h4{
+        font-family: "Quicksand", light light;
+        font-size: 20px;
+        margin-bottom: 40px;
+        font-weight: 300;
+    }
+    .lnks-ftr>ul{
+        padding: 0;
+        margin: 0;
+    }
+    .contact-us a{
+        color: #d83e06;
+        font-size: 24px;
+    }
 }
