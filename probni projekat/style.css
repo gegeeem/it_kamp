@@ -19,6 +19,10 @@
     font-family: "DM Sans Regular";
     src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
 }
+@font-face {
+    font-family: "Lobster";
+    src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
+}
 
 body{
     margin: 0;
@@ -72,7 +76,6 @@ main{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-color: #d83e06;
     width: 100%;
     height: 100%;
     padding-left: 15px;
@@ -90,6 +93,7 @@ main{
     position: absolute;
     left: -20px;
     top: -0;
+
 }
 .delicious > h2{
     font-size: 79px;
@@ -153,11 +157,19 @@ main{
 
 
 @media only screen and (max-width: 575px) {
-    @font-face {
+    /* @font-face {
         font-family: "DM Sans";
         src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
     }
-    
+    @font-face {
+        font-family:"Quicksand" ;
+        src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58a-wg.woff2");
+    }
+    @font-face {
+        font-family: "Lobster";
+        src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
+    } */
+
     .container-menu{
         position: relative;
     }
@@ -438,6 +450,90 @@ main{
         margin-bottom: 30px;
         margin-top: 0px;
     }
+
+
+    .cards-clients{
+        overflow: scroll;
+        padding: 50px 15px;
+        display: flex;
+        gap: 15px
+    }
+    .card-clnt{
+        flex:1 0 calc(100vw - 4*15px);
+        padding-left: 15px;
+        padding-right: 15px;
+        border-bottom-right-radius: 60px;
+        margin-top:10px;
+        padding: 30px 15px 40px 15px;
+        box-shadow:0 20px 20px rgba(240,69,6,.1);
+        
+    }
+    .card-clnt>p{
+        font-size: 24px;
+        font-family: "DM sans", sans-serif;
+        line-height: 30px;
+    }
+    .client-name-img{
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+    .name-profession{
+        display: flex;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .img-client{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .img-client img{
+        display: block;
+    }
+    .name-profession p{
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        color: #5e5e5e;
+        font-weight: 300;
+        padding: 0;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 60%;
+        
+    }
+    .name-profession span{
+        color: #f04506;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 0;
+        line-height: 80%;
+    }
     /* end client say */
+
+    /* insta cake */
+    .insta-cake{
+        display: flex;
+        align-items: center;
+        overflow: auto;
+    }
+    .insta-img{
+        flex:1 0 50vw;
+        position: relative;
+        /* overflow: hidden; */
+    }
+    .insta-img a{
+        position: absolute;
+    }
+    .insta-img img{
+        width: 100%;
+    }
+    /* end insta cake */
+
+
+    /* Fooeter */
+    .ftr{ /*dodatna klasa u samom containeru-feature*/
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
     
 }
