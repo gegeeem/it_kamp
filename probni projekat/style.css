@@ -44,7 +44,11 @@ header{
     z-index: 5;
     background-color: #fff;
 }
+.container-menu{
+    display: flex;
+}
 .main-header{
+    position:relative;
     padding: 15px 15px;
     display: flex;
     justify-content: space-between;
@@ -61,10 +65,32 @@ header{
     background-size: 200%;
     border-radius: 30px;
     padding: 13px 37px;
+    margin-left: 15px;
     text-transform: capitalize;
 }
-.mobile-menu{
-    /* display: none; */
+.mobile-links{
+    display: none;
+}
+/* .mobile-menu{
+    display: none; 
+} */
+.links> ul{
+    display: flex;
+    align-items: center;
+}
+.links>ul>li>a{
+    font-family: "Quicksand",sans-serif;
+    color: #5E5E5E;
+    font-weight: 500;
+    padding: 28px 20px;
+    font-size: 16px;
+}
+.order > span{
+    color:#f04506;
+    font-family: "Quicksand",sans-serif;
+}
+.order > span > i{
+    transform: rotate(90deg);
 }
 /* end header */
 /* main section */
@@ -155,9 +181,14 @@ main{
     flex-wrap: wrap;
 }
 /* end our fetures */
+@media only screen and (max-width: 980px){
+    .order > span{
+        display: none;
+    }
+    
+}
 
-
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 830px) {
     @font-face {
         font-family: "DM Sans";
         src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
@@ -174,17 +205,71 @@ main{
         font-family: "Quicksand", sans-serif;
     }
 
-    .container-menu{
+    /* .container-menu{
         position: relative;
+    } */
+    .main-header{
+        padding-left: 15px;
+        padding-right: 15px;
     }
+    .mobile-links{
+        position: absolute;
+        top: 70px;
+        left:15px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        background-color: #575b5f;
+        color: #fff;
+        padding: 10px;;
+    }
+    .lnks-toggle{
+        display: none;
+    }
+    .lnks-toggle>ul{
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .lnks-toggle>ul>li{
+        
+        width: 100%;
+    }
+    .lnks-toggle a{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+    }
+    .links>ul{
+        display: none;
+
+    }
+
     .mobile-menu{
-        padding: 15px;
+        /* padding: 15px;
         position: absolute;
         bottom: -48px;
         width: 100%;
         z-index: 99;
-        background-color: antiquewhite;
+        background-color: antiquewhite; */
+        display: block;
+        text-align: center;
+        background-color: rgb(20, 20, 20);
+        padding: 5px;
+        align-self: flex-end;
     }
+    #hamburger{
+        position:absolute;
+        z-index: -1000;
+    }
+    #hamburger:checked ~ .lnks-toggle{
+        display: block;
+    }
+    
     .container{
         min-height: 450px;
     }
