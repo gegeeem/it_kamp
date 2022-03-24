@@ -4,22 +4,12 @@
     list-style-type: none;
 }
 @font-face {
-    font-family: "Dm Sans";
+    font-family: "DM Sans";
     src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2");
 }
 @font-face { font-family: "Quicksand"; src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-wg.woff2");}
-@font-face {
-    font-family:"Quicksand" ;
-    src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58a-wg.woff2");
-}
-@font-face {
-    font-family: "Quicksand";
-    src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2");
-}
-@font-face {
-    font-family: "DM Sans Regular";
-    src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
-}
+
+
 @font-face {
     font-family: "Lobster";
     src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
@@ -244,7 +234,7 @@ main{
     color: #000;
     margin-top: 0;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom:0 ;
@@ -315,7 +305,7 @@ main{
     color: #000;
     margin-top: 0;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom:0 ;
@@ -952,7 +942,7 @@ main{
             color: #000;
             margin-top: 0;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 22px;
             line-height: 1.5;
             margin-bottom:0 ;
