@@ -183,24 +183,16 @@ main{
     justify-content: center;
 }
 .container-popular{
-    padding: 110px 0px;;
+    padding: 110px 0px;
+    max-width: 1200px;
 }
 .slider-cake{
     display: flex;
     max-width: 1200px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    gap:30px
-}
-.cake-card{
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color:  #fff5f2;
-    padding: 20px;
-    border-bottom-right-radius: 60px;
-    margin-bottom: 40px;
+    /* gap:30px; */
+   
 }
 .justify-align{
     text-align: center;
@@ -259,6 +251,76 @@ main{
     text-align: center;
     font-family: "DM Sans",sans-serif;
 }
+.slider-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap:30px;
+}
+.slider-cake{
+    overflow: auto;
+    scrollbar-width: thin;
+
+    
+    /* width: 100%; */
+    
+    
+}
+.cake-card{
+    flex:0 0 calc(33.33333% - 30px); 
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color:  #fff5f2;
+    padding: 20px;
+    border-bottom-right-radius: 40px;
+    margin-bottom: 30px;
+}
+.img-container{
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    width: auto;
+}
+.img-container > img{
+    width: 100%;
+    display: block;
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.img-container>img:hover{
+    transform: scale(1);
+}
+.description-cake{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.description-cake > h4{
+    font-family: "Quicksand",sans-serif, url(https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2);
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom:0 ;
+}
+.description-cake > a{
+    font-family: "Quicksand Light Regular",sans-serif;
+    border: none;
+    padding: 13px 37px;
+}
+.description-cake > p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-weight: 400;
+    padding: 0 30px;
+}
+/* kraj kartice sa kolacima */
 /* End kartice sa klacima */
 /* Our story */
 .our-story{
@@ -843,8 +905,9 @@ main{
         /* kartice sa kolacima */
         .slider-cake{
             overflow: auto;
-            display: flex;
-            gap:20px;
+            padding-left: 0px;
+            /* display: flex;
+            gap:20px; */
             
         }
         .cake-card{
@@ -856,7 +919,7 @@ main{
             background-color:  #fff5f2;
             padding: 20px;
             border-bottom-right-radius: 60px;
-            margin-bottom: 40px;
+            margin-bottom: 0px;
         }
         .img-container{
             border-bottom-right-radius: 40px;
@@ -878,7 +941,7 @@ main{
             margin-top: 0;
             font-style: normal;
             font-weight: 500;
-            font-size: 1.5rem;
+            font-size: 22px;
             line-height: 1.5;
             margin-bottom:0 ;
         }
@@ -886,6 +949,7 @@ main{
             font-family: "Quicksand Light Regular",sans-serif;
             border: none;
             padding: 13px 37px;
+            font-size: 18px;
         }
         .description-cake > p{
             font-size: 16px;
