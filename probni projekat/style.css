@@ -105,44 +105,44 @@ main{
     background-position: center center;
     background-size: cover;
     width: 100%;
-    min-height: 830px;
+    min-height: 820px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .flex-container{
     position: relative;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
 }
 .text-over-img{
     position: relative;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    flex: 0 0 50%;
 }
 .text-over-img > h1{
-    font-size: 36px;
+    font-size: 80px;
     font-weight: 700;
     margin-bottom: 24px;
     margin-top: 0px;
     font-family: 'Quicksand',sans-serif;
 }
+.text-over-img>p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
 .text-over-img > .delicious{
     position: absolute;
-    left: -20px;
-    top: -130px;
+    left: 0px;
+    top: -230px;
 
 }
 .delicious > h2{
-    font-size: 79px;
+    font-size: 160px;
     font-family: "Lobster",cursive;
     color: rgba(240,69,6,.06);
     font-weight: 400;
@@ -724,6 +724,88 @@ align-self: start;
     .container{
         min-height: 450px;
     }
+    /* main section */
+main{
+    
+}
+
+.container{
+    position: relative;
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 150px;
+}
+.flex-container{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text-over-img{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1 0 50%
+}
+.text-over-img > h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    font-family: 'Quicksand',sans-serif;
+}
+.text-over-img > .delicious{
+    position: absolute;
+    left: -6px;
+    top: -120px;
+
+}
+.delicious > h2{
+    font-size: 79px;
+    font-family: "Lobster",cursive;
+    color: rgba(240,69,6,.06);
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+.explore-btn > a{
+    font-size: 22px;
+    font-weight: 400;
+    padding: 15px 45px;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    font-family: "DM Sans", sans-serif;
+}
+    /* button for all */
+    .btn{
+        color: #fff;
+        border-radius: 30px;
+        display: inline-block;
+        background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+        font-family: "DM Sans", sans-serif;
+        
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        display: inline-block;
+        background-size: 200%;
+        transition: .6s;
+        background-color: transparent;
+    }
+    /* end button for all */
     /* most popular */
         .most-popular{
             padding-top: 60px;
