@@ -72,9 +72,19 @@ img{
                              'monkey monkey bear'
                              'elephant bird bird'
                              'swan swan owl';
+        grid-auto-rows: 1fr;
     }
     .elephant > img{
         object-position: 80% 10%;
     }
     
+}
+@media only screen and (max-width: 530px) {
+    .container{
+        grid-template-areas: 'monkey monkey'
+                                'eagle bear'
+                                'bird bird'
+                                'swan swan'
+                                'elephant owl';
+    }
 }
