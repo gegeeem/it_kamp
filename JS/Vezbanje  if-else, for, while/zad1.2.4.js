@@ -32,4 +32,16 @@ if(a1 < a2 && a1 < a3){
 }else if(a3 < a1 && a3 < a2){
     console.log('Cena sa popustom je: ' + ( a1+a2));
     console.log('Usteda je:' + a3)
+}else if(a1 === a2 && a1 === a3){
+    console.log('Cena sa popustom je: ' + ( a1+a2));
+    console.log('Usteda je:' + a3)
+}else if(a1 === a2 && a1 < a3){
+    console.log('Cena sa popustom je: ' + ( a3+a1));
+    console.log('Usteda je:' + a1)
+}else if(a1 === a3 && a1 < a2){
+    console.log('Cena sa popustom je: ' + ( a2+a1));
+    console.log('Usteda je:' + a1)
+}else if(a2 === a3 && a2 < a1){
+    console.log('Cena sa popustom je: ' + ( a2+a1));
+    console.log('Usteda je:' + a2)
 }
