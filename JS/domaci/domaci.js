@@ -9,6 +9,6 @@ function mnozenje (){
         proizvod = proizvod * nizBrojeva[i];
         // console.log(proizvod);
     }
-    return 'Proizvod  je unesenih brojeva je' + proizvod;
+    return prompt('Proizvod unesenih brojeva je: ' + proizvod);
 }
-mnozenje();
+console.log(mnozenje());
