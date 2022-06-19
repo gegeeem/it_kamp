@@ -39,7 +39,7 @@ const radnik ={
     city: 'Novi Pazar',
     stanovanje: {
         function(){
-            console.log(this);
+            console.log(this); /// this ,e na stanovanje objektu koji je i key objekta radnik
     },
     }
     
