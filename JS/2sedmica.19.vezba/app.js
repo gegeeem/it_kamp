@@ -41,6 +41,7 @@
 //     a= 10;
 //     console.log(a + b);
 //     function drugafunc(arg1){
+    
 
 //         console.log('druga');
 //         console.log(arg1 +a);//koristimo a = 10, varijablu i ako se ona vise ne koristi u programu u
