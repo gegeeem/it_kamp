@@ -43,7 +43,7 @@ const obecanje  = async ()=>{
     
    
     try {
-        const promise = await fetch('https://jsonplaceholder.typicode.com/userss');
+        const promise = await fetch('https://jsonplaceholder.typicode.com/users');
         const json = await promise.json();
         console.log(json);
         if(json){
