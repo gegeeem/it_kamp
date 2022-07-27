@@ -1,0 +1,17 @@
+1. HTML Collection _proto
+2. difference between textContent and innerText
+   na textContent ne utice style, npr display none dok na innerText utice jedan od primera
+   dodavanje styila className lisit preko for petlje
+3. parentNode
+4. parentElement
+5. chilNodes dobija se lista elemenata koji su deca, i prikazije  ;inebreak kao elemente
+6. linebreak takodje predtsavlja node tj. element
+7. children ne prikazuje linebreak kao elemente tj. nodove (children[1] itd) firstChild-takodje ubraja i linebreak kao element
+8. firstElementChild.textContent lastElementChild
+9. nextSibligins(prikazuje lnebreak kao text node) nextElementSibligins
+10. createElement, setAttribute('title','hello'), createTextNode
+11. querySelector('header .container')
+12insertBefore('newDiv' h1)
+
+
+13. e.preventDefault
