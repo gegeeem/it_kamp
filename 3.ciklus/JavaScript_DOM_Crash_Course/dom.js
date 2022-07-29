@@ -15,7 +15,7 @@
 
 const form = document.getElementById('addForm');
 const item = document.getElementById('items');
-
+const filter = document.getElementById('filter');
 
 form.addEventListener('submit', addItem); //dodaj novu stavku kad je 'submit' izvrsen
 
@@ -48,4 +48,21 @@ function deleteItem(e){
     let parent = e.target.parentElement;
      item.removeChild(parent);
     console.log(parent);
+}
+//pretrazivanje
+filter.addEventListener('keyup',filterItems);
+
+function filterItems(e){
+    let search = e.target.value.toLowerCase();
+    const liItems = item.getElementsByTagName('li');
+    Array.from(liItems).forEach(function(el){
+        itemName = el.firstChild.textContent.toLowerCase();
+        console.log(itemName );
+        if(itemName.indexOf(search) === -1){
+            el.style.display = 'none';
+        }else{
+            el.style.display = 'block';
+        }
+    });
+
 }
