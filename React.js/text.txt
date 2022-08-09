@@ -1,0 +1,27 @@
+package menager
+yarn itd..
+npm
+npx povlaci gotov paket neko napravio iz tima
+naziv aplikacije ne moze da bude odvojeno
+
+struktura foldera
+
+src->nalazi se nasa aplikacija
+public-> idu stvari to je build kad nasu app stavimo na web npm run build
+index.html->
+node_modules-> instalirani paketi i buduci, ovaj folder nikad ne ide na git!!!
+git_ignore ->cuva fajlove koje treba da ignorise tj. koji ne trebaju na git, local varijable i druge
+package.Json-> kao licna karta dependecies{}-> svi pkaeti koji su instalirani, verzija react, bez ovih pkaeta nema pplikacije
+'scripts'{start run itd}
+index.js->glavni folder
+App.js polazna aplikacija
+
+
+ReactDom-> virtual DOM je kopija pravog DOM-a, react menja samo one delove koji su zamenjeni nece sve iz pocetka da konstruise citav DOM
+REact radi na principun komponenti 
+
+package.json se nalazi koje pakete treba da imamo kada povlacimo neku app sa github-aplikacija
+
+APP.js u njega ide router
+Komponente
+PROPS argumenti za komponente, props je objekat props{}
