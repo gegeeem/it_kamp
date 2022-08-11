@@ -16,6 +16,9 @@ package.Json-> kao licna karta dependecies{}-> svi pkaeti koji su instalirani, v
 index.js->glavni folder
 App.js polazna aplikacija
 
+<></> react fragment
+stylesheet css js verzijai ract style je objekat
+
 
 ReactDom-> virtual DOM je kopija pravog DOM-a, react menja samo one delove koji su zamenjeni nece sve iz pocetka da konstruise citav DOM
 REact radi na principun komponenti 
