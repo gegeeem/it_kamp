@@ -36,6 +36,8 @@
     transform: rotate(360deg);
   }
 } */
-.card-conctainer{
-  
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
