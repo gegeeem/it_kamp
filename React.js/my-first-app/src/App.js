@@ -4,6 +4,7 @@ import Greeeting from './components/Greeting/Greeting';
 import Card from './components/Card/Card';
 import Form from './components/Form.js/Form';
 import Counter from './components/Counter/Counter';
+import {useState} from 'react';
 
 function App() {
   // return (
@@ -65,13 +66,37 @@ function App() {
 
 
 
+// return(
+//   <div className='card-container'>
+//     <Form ></Form>
+//   </div>
+// )
+
+/// counter
+const [component, setComponent] = useState(0);// number of komponents default iz one
+const [stateBeetweenComp, setStateBetweenComp] =useState(0);
+function addCom(number, comp, stateBeetweenComp){
+   let componentsArr = [] ;
+ for(let i = 0; i <= number; i++ ){
+   componentsArr.push(<Counter key = {i} sharedState = {stateBeetweenComp}/>);
+ }
+// componentsArr = componentsArr.map(e=>e)
+// const componentsArr = comp;
+console.log(componentsArr);
+return <>
+        <button onClick={()=>setComponent(prev=>prev+1)}>Add new Counter{component}</button>
+        <button onClick={()=>setStateBetweenComp(false)}>ALL Reset {stateBeetweenComp}</button>
+          {componentsArr}
+        </>;
+}
+
 return(
   <div className='card-container'>
-    <Form ></Form>
-    <Counter />
+    
+    {addCom(component,<Counter />)}
   </div>
 )
-
+//counter end
   
 }
 
