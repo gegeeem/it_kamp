@@ -2,6 +2,8 @@ import './App.css';
 import Title from './components/Title/Title';
 import Greeeting from './components/Greeting/Greeting';
 import Card from './components/Card/Card';
+import Form from './components/Form.js/Form';
+import Counter from './components/Counter/Counter';
 
 function App() {
   // return (
@@ -32,20 +34,20 @@ function App() {
     
   // );
 
-  const people = [
-    'Creola Katherine Johnson: mathematician',
-    'Mario José Molina-Pasquel Henríquez: chemist',
-    'Mohammad Abdus Salam: physicist',
-    'Percy Lavon Julian: chemist',
-    'Subrahmanyan Chandrasekhar: astrophysicist'
-  ];
-  return(
-      <div>
-        {people.map((p)=>(
-          <span><h3>{p}</h3></span>
-        ))}
-      </div>
-  )
+  // const people = [
+  //   'Creola Katherine Johnson: mathematician',
+  //   'Mario José Molina-Pasquel Henríquez: chemist',
+  //   'Mohammad Abdus Salam: physicist',
+  //   'Percy Lavon Julian: chemist',
+  //   'Subrahmanyan Chandrasekhar: astrophysicist'
+  // ];
+  // return(
+  //     <div>
+  //       {people.map((p)=>(
+  //         <span><h3>{p}</h3></span>
+  //       ))}
+  //     </div>
+  // )
 
   // const people = [
   //   {name:'Creola Katherine Johnson: mathematician'},
@@ -59,6 +61,18 @@ function App() {
   //       )}
   //   </>
   // )
+  // 
+
+
+
+return(
+  <div className='card-container'>
+    <Form ></Form>
+    <Counter />
+  </div>
+)
+
+  
 }
 
 export default App;
