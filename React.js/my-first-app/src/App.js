@@ -5,6 +5,7 @@ import Card from './components/Card/Card';
 import Form from './components/Form.js/Form';
 import Counter from './components/Counter/Counter';
 import {useState} from 'react';
+import Team from './components/Team/TEam';
 
 function App() {
   // return (
@@ -73,30 +74,78 @@ function App() {
 // )
 
 /// counter
-const [component, setComponent] = useState(0);// number of komponents default iz one
-const [stateBeetweenComp, setStateBetweenComp] =useState(0);
-function addCom(number, comp, stateBeetweenComp){
-   let componentsArr = [] ;
- for(let i = 0; i <= number; i++ ){
-   componentsArr.push(<Counter key = {i} sharedState = {stateBeetweenComp}/>);
- }
-// componentsArr = componentsArr.map(e=>e)
-// const componentsArr = comp;
-console.log(componentsArr);
-return <>
-        <button onClick={()=>setComponent(prev=>prev+1)}>Add new Counter{component}</button>
-        <button onClick={()=>setStateBetweenComp(false)}>ALL Reset {stateBeetweenComp}</button>
-          {componentsArr}
-        </>;
-}
+// const [component, setComponent] = useState(0);// number of komponents default iz one
+// const [stateBeetweenComp, setStateBetweenComp] =useState(0);
+// function addCom(number, comp, stateBeetweenComp){
+//    let componentsArr = [] ;
+//  for(let i = 0; i <= number; i++ ){
+//    componentsArr.push(<Counter key = {i} sharedState = {stateBeetweenComp}/>);
+//  }
+// // componentsArr = componentsArr.map(e=>e)
+// // const componentsArr = comp;
+// console.log(componentsArr);
+// return <>
+//         <button onClick={()=>setComponent(prev=>prev+1)}>Add new Counter{component}</button>
+//         <button onClick={()=>setStateBetweenComp(false)}>ALL Reset {stateBeetweenComp}</button>
+//           {componentsArr}
+//         </>;
+// }
 
+// return(
+//   <div className='card-container'>
+    
+//     {addCom(component,<Counter />)}
+//   </div>
+// )
+// //counter end
+
+
+///upadate array
+// const DATA = [
+//   'Prva recenica',
+//   'Druga recenica',
+//   'Treca recenica',
+//   'Cetvrta recenica'
+// ];
+// const n = [1, 3, 5, 6,];
+// const [array, setArray] = useState(DATA);
+// // function addArray(curr, sentence){
+// //   curr.push(sentence)
+// // }
+// // const array = [...prev];
+// //const rev_array = array.reverse(); nacin za rad sa nizom!!
+// const generateNewWorld = ()=>Math.random().toString(36).slice(2,7)
+// return(
+//     <div className='card-container'>
+//       <ul>
+//       {array.map((el)=>(
+//         <li key = {el}>{el}</li>
+//       ))}
+//       </ul>
+//       <button onClick={()=>setArray((prev)=>[...prev,generateNewWorld()])}>Dodaj</button> {/*-- previ se kopija prethodnog state-a*/}
+//       <button onClick={()=>setArray((prev) => {const rev = [...prev].reverse(); return rev;})}>Reverse</button>{/*reverse metoda menja dati array pa se ne moze primenjivati na state koji je trenutno array, jer valjda poslednji i pretposlednji se ne menjaju */}
+//     </div>
+//   )
+
+//brisanje sa niza
+const favoritesTeems = [
+  {id: 0, name: 'Arsenal', points: 6},
+  {id: 1, name: 'Man City', points: 6},
+  {id: 3, name: 'PAzal', points: 4}
+];
+const [teams, setTeams] = useState(favoritesTeems);
+const deleteTeam = (id) =>{
+  const newTeams = teams.filter((team)=>team.id !== id);
+  setTeams(newTeams);
+}
 return(
   <div className='card-container'>
-    
-    {addCom(component,<Counter />)}
+    <button>Add new Team</button>
+    {teams.map((e)=>
+      <Team key = {e.id} name = {e.name} points = {e.points} onDelete = {()=>{deleteTeam(e.id)}}/>
+    )}
   </div>
 )
-//counter end
   
 }
 
