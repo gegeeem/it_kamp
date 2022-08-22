@@ -1,0 +1,19 @@
+.CloseBtn{
+    background-color: rgb(190, 63, 63);
+    border-radius: 3px;
+    color: rgb(247, 214, 204);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.CloseBtn:hover{
+    cursor: pointer;
+    background-color: rgb(223, 52, 52);;
+}
+.CloseBtn>span{
+    display: block;
+    padding: 1px 10px 5px 10px;
+}
