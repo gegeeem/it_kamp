@@ -5,7 +5,7 @@ let ides  = 0;// id generator
 export default function CryptoForm(){
     
     const [valute, setValute] = useState({name:'', amount: ''});
-    const [list, setList] = useState([{id:0, name: 'dollar', amount:'1'}]);
+    const [list, setList] = useState([{id:0, name: 'dollar', amount:'1', isActiveShow:false}]);
     // const clsBtn = (el)=>{
     //     setList(
     //         el.filter(a =>
@@ -33,7 +33,7 @@ export default function CryptoForm(){
                 </div>
                 
                 <button className='addButton' onClick={()=>{
-                setList((list)=>[...list, {id: ides++, name: valute.name, amount: valute.amount}]);
+                setList((list)=>[...list, {id: ides++, name: valute.name, amount: valute.amount, isActiveShow:false}]);
                 setValute({name:'', amount:''});
                 }}>
                     Add
@@ -51,7 +51,8 @@ export default function CryptoForm(){
                 value name : {valute.name} value amaount:{valute.amount} valute id{valute.id}
                 
             </ul> */}
-            {/* <CryptoList props ={list} clickedFunc={(el)=>{deleteList(el)}}/> */}
+            {/* <CryptoList props ={list} clickedFunc={(el)=>{deleteList(el)}}/> */}{/*u Crypto.list.js pozivamofju onclick={()=>{clickedFunc
+                (e.id)}} */}
             <CryptoList props ={list} stateOfParent={setList}/>
                 
             

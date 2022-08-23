@@ -22,3 +22,9 @@ li{
     display: block;
     padding: 5px;
 }
+.showActive{
+    display: block;
+}
+.showNotActive{
+    visibility: hidden;
+}
