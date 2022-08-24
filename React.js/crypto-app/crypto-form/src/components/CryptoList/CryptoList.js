@@ -4,7 +4,7 @@ import List from "../List/List";
 import './CryptoList.css'
 // export default function CryptoList({props, clickedFunc}){
 
-    export default function CryptoList({props, stateOfParent}){
+    export default function CryptoList({props, stateOfParent, description}){
        
 
     // let b = props[Object.keys(props)[0]]
@@ -57,7 +57,7 @@ const showMore = ()=>{
                     //     <CloseButton onClickFun={()=>{deleteList(props, stateOfParent, e.id)} }/>
                     // </li>
                     
-                    <List key={e.id} k={e.id} name={e.name} amount={e.amount} state={props} stateOfParent={stateOfParent} isChangedShow={e.isActiveShow}/>
+                    <List key={e.id} k={e.id} name={e.name} amount={e.amount} state={props} stateOfParent={stateOfParent} isChangedShow={e.isActiveShow} description={e.description}/>
                 )) 
             }
     </ul>

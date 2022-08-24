@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .cryptoForm{
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +20,7 @@
 .inputs{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
 }
 
 .inputAdd{
@@ -26,9 +29,17 @@
     border-left: 0;
     border-right: 0;
     padding: 5px;
-    width: 46%;
+    width: 47%;
     font-size: 20px;
+    color: rgb(151, 148, 148);
 
+}
+.inputAdd:focus{
+    color: rgb(48, 46, 46);
+}
+.description{
+    width: 100%;
+    margin-top: 10px;
 }
 .inputAdd:focus{
     /* border-bottom: 3px solid rgb(172, 174, 182); */
@@ -37,6 +48,8 @@
     border-radius: 4px;
 }
 .addButton{
+    margin-top: 15px;
+    width: 100%;
     border: 0px;
     background-color:  rgb(202, 203, 209);
     border-radius: 3px;

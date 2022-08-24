@@ -1,0 +1,52 @@
+li{
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(218, 222, 224);
+}
+.item-container{
+    display: flex;
+    justify-content: space-between;
+}
+.addedItem{
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+
+
+}
+.addedItem>span{
+    display: block;
+    padding: 5px;
+}
+.btnShow{
+    border: 0;
+    padding: 8px;
+    margin-left: 10px;
+}
+.showActive{
+   display: block;
+   background-color: rgb(206, 211, 214);
+   padding: 3px;
+   border-radius: 5px;
+}
+.showNotActive{
+    display: none;
+}
+.arrow {
+    border: solid rgb(110, 107, 107);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+ 
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
