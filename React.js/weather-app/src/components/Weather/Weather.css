@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+.weatherApp-container{
+    max-width: 350px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 2px solid gray;
+    background-size: cover;
+}
+.cold{
+    background-image: url('/src/images/cold.jpg');
+}
+.temperatureGenerator{
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.temperatureGenerator:hover{
+background-color: rgb(198, 207, 214);
+}
