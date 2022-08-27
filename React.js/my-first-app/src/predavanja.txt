@@ -1,0 +1,20 @@
+REACT lifesyslce
+react dom kuporedjuje kopiju i uporedjuje sa pravim
+nicijalizacija
+mounting mountovanje penjanje ili put komponente do DOM-a
+zivotni vek od prikazivanja do unistavanja, prvi njen nivo je mounting
+didimount and willmount 
+1.componentwill mount 2.render 3. componentdidmount
+zavrsena inicijalizicija i prikazana je na ekrana ako je mountovana
+
+Upadate
+Unmouting skidanje komponenti i prikzivanje novih
+
+u funkcijonalnom react-u imamo useEffect (sideeffect je npr pozivanje podataka sa servera)
+
+
+useEffect callback fja i lista dependec
+concole je zbog strict moda poziva dvaputa
+[]okini samo funkciju na didi mount, 
+kada ima nesto u zagrdama onda se menjaju i te varijable unutar[]
+kada pozevemo myFunc tada menjamo na onClick varijable unutar []nas primer

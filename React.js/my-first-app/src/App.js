@@ -4,7 +4,7 @@ import Greeeting from './components/Greeting/Greeting';
 import Card from './components/Card/Card';
 import Form from './components/Form.js/Form';
 import Counter from './components/Counter/Counter';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Team from './components/Team/TEam';
 
 function App() {
@@ -128,22 +128,39 @@ function App() {
 //   )
 
 //brisanje sa niza
-const favoritesTeems = [
-  {id: 0, name: 'Arsenal', points: 6},
-  {id: 1, name: 'Man City', points: 6},
-  {id: 3, name: 'PAzal', points: 4}
-];
-const [teams, setTeams] = useState(favoritesTeems);
-const deleteTeam = (id) =>{
-  const newTeams = teams.filter((team)=>team.id !== id);
-  setTeams(newTeams);
+// const favoritesTeems = [
+//   {id: 0, name: 'Arsenal', points: 6},
+//   {id: 1, name: 'Man City', points: 6},
+//   {id: 3, name: 'PAzal', points: 4}
+// ];
+// const [teams, setTeams] = useState(favoritesTeems);
+// const deleteTeam = (id) =>{
+//   const newTeams = teams.filter((team)=>team.id !== id);
+//   setTeams(newTeams);
+// }
+// return(
+//   <div className='card-container'>
+//     <button>Add new Team</button>
+//     {teams.map((e)=>
+//       <Team key = {e.id} name = {e.name} points = {e.points} onDelete = {()=>{deleteTeam(e.id)}}/>
+//     )}
+//   </div>
+// )
+const [number, setNumbre] = useState(0);
+const [anotherNum, setAnotherNum] = useState(0);
+function myFunc(){
+  console.log('myFunc je pozvana')
 }
+useEffect(
+  ()=>{
+    myFunc();
+  }
+, [number])   //lista depends   []=>je componens did mount
 return(
   <div className='card-container'>
-    <button>Add new Team</button>
-    {teams.map((e)=>
-      <Team key = {e.id} name = {e.name} points = {e.points} onDelete = {()=>{deleteTeam(e.id)}}/>
-    )}
+    <div onClick={()=>{setNumbre(number + 1 )}}>click here</div>
+    <div>{number}</div>
+    <div onClick={()=>{setAnotherNum(anotherNum + 1)}}>Another click: {anotherNum}</div>
   </div>
 )
   
