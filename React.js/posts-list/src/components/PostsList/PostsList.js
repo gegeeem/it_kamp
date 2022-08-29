@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import Postitem from '../PostsItem/Postsitem';
+import './PostsList.css'
 
 export default function PostsList(){
     const[posts, setPosts] = useState([]);
@@ -23,7 +24,10 @@ export default function PostsList(){
     }
     ,[]);
     return(
-         <Postitem postItems={posts} />
+        <div className='main-container'>
+            <Postitem postItems={posts} />
+        </div>
+         
         // <ul>
         //         {
         //     posts.map((el)=>

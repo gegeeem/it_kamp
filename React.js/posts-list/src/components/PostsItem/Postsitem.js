@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import Item from "../Item/Item";
+import './PostsItems.css';
 
 export default function Postitem({postItems}){
     const [showMore, setShowMore]= useState(false);
