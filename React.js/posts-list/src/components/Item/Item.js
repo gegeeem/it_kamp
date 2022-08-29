@@ -4,7 +4,11 @@ export default function Item({ident, title, description, showBtn, showBtnFunc}){
         <li >
             <h3>{title}</h3>
             <p>{showBtn === ident ? description: ''}</p>
-            <button onClick={showBtnFunc}>Show more</button>
+            {
+                showBtn === ident ? <div className='btnShowMore' onClick={showBtnFunc}><span>-</span></div> 
+                : <div className='btnShowMore' onClick={showBtnFunc}><span>+</span></div>
+            }
+            
         </li>
     )
 }

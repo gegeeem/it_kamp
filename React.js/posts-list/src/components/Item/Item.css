@@ -1,8 +1,30 @@
 li{
     background: #fff;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #70bdc0;
 }
-li h2{
+li h3{
     text-transform: capitalize;
+    color: #6e8485;
+}
+.btnShowMore{
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 5px;*/
     color: #29696b;
+    background-color: #c4d9da;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+}
+.btnShowMore>span{
+    display: block;
+    margin-top: -6px;
+    cursor:pointer;
 }
