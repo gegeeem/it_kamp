@@ -18,3 +18,14 @@ concole je zbog strict moda poziva dvaputa
 []okini samo funkciju na didi mount, 
 kada ima nesto u zagrdama onda se menjaju i te varijable unutar[]
 kada pozevemo myFunc tada menjamo na onClick varijable unutar []nas primer
+
+
+
+////
+npm yarn paketi preko njih instaliramo druge bib lioteke
+ako package onda je npm ako je yarn dugacji naziv
+
+
+///
+
+page: za axios servera znaci moze da se formira page

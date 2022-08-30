@@ -6,3 +6,6 @@ ul{
     grid-gap: 5px;
     display: grid;
 }
+.responseGrid{
+    grid-template-rows: auto;
+}
