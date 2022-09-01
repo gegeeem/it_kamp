@@ -16,11 +16,14 @@ export default function Main() {
   const [ctg, setCtg] = useState("character");
 
   const [statusCharacter, setStatusCharacter] = useState("");
+  const [species, setSpecies] = useState("");
 
-  function getData(category, path, status) {
+  function getData(category, path, status, species) {
     try {
       axios
-        .get(`${BASE_URL}/${category}/?page=${path}&status=${status}`)
+        .get(
+          `${BASE_URL}/${category}/?page=${path}&status=${status}&species=${species}`
+        )
         .then((res) => {
           setCategory(res.data.results);
           setNextPrevPage({
@@ -38,8 +41,8 @@ export default function Main() {
     }
   }
   useEffect(() => {
-    getData(ctg, page, statusCharacter);
-  }, [page, ctg, statusCharacter]); //if page cnahge or category from selected list turn on useEffect
+    getData(ctg, page, statusCharacter, species);
+  }, [page, ctg, statusCharacter, species]); //if page cnahge or category from selected list turn on useEffect
   return (
     <div className="main-container">
       <button
@@ -59,6 +62,21 @@ export default function Main() {
       >
         next
       </button>
+      <form onSubmit={(e) => e.preventDefault()}>
+        Species
+        <input
+          defaultValue="alien...,human... etc"
+          onFocus={(e) => {
+            e.target.value = "";
+          }}
+          type={"text"}
+          onChange={(e) => {
+            setSpecies(() => e.target.value);
+            setPage(1);
+          }}
+        />
+        <input type="submit" value="search" />
+      </form>
       <select
         value={ctg}
         onChange={(e) =>

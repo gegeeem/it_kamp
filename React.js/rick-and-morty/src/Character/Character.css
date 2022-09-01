@@ -13,6 +13,6 @@ li>img{
     border-radius: 10px;
 }
 .info{
-    text-align: center;
-    width: 100%;
+    width: 50%;
+    padding-left: 8px;
 }

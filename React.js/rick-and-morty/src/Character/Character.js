@@ -4,9 +4,10 @@ export default function Character({ character }) {
     <li>
       <img src={character.image} />
       <div className="info">
-        <h3>{character.name}</h3>
-        <p>{character.gender}</p>
-        <p>{character.status}</p>
+        <h4>{character.name}</h4>
+        <p>gender:{character.gender}</p>
+        <p>species: {character.species}</p>
+        <p>status: {character.status}</p>
       </div>
     </li>
   );
