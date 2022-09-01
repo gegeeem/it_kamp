@@ -13,27 +13,31 @@ export default function Main() {
   const [nextPrevPage, setNextPrevPage] = useState({});
   const [ctg, setCtg] = useState("character");
 
-  function getData(category, path) {
-    try {
-      axios.get(`${BASE_URL}/${category}/?page=${path}`).then((res) => {
-        setCategory(res.data.results);
-        setNextPrevPage({
-          prev: res.data.info.prev,
-          next: res.data.info.next,
-        });
+  const [statusCharacter, setStatusCharacter] = useState("");
 
-        console.log(nextPrevPage);
-        console.log(category);
-        console.log(`url ${BASE_URL}/${category}/?page=${path}`);
-        console.log("ctg", ctg);
-      });
+  function getData(category, path, status) {
+    try {
+      axios
+        .get(`${BASE_URL}/${category}/?page=${path}&status=${status}`)
+        .then((res) => {
+          setCategory(res.data.results);
+          setNextPrevPage({
+            prev: res.data.info.prev,
+            next: res.data.info.next,
+          });
+
+          console.log(nextPrevPage);
+          console.log(category);
+          console.log(`url ${BASE_URL}/${category}/?page=${path}`);
+          console.log("ctg", ctg);
+        });
     } catch (error) {
       console.log(error);
     }
   }
   useEffect(() => {
-    getData(ctg, page);
-  }, [page, ctg]); //if page cnahge or category from selected list turn on useEffect
+    getData(ctg, page, statusCharacter);
+  }, [page, ctg, statusCharacter]); //if page cnahge or category from selected list turn on useEffect
   return (
     <div>
       <button
@@ -66,6 +70,21 @@ export default function Main() {
         <option value="location">Location</option>
         <option value="episode">Episode</option>
       </select>
+      {ctg === "character" && (
+        <select
+          value={statusCharacter}
+          onChange={(e) =>
+            setStatusCharacter(() => {
+              setPage(""); //reset to first page after change category
+              return e.target.value; // catch value from option and add to ctg state
+            })
+          }
+        >
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknow">Unknow</option>
+        </select>
+      )}
       {ctg === "character" ? (
         <ul>
           {category.map((actor) => (
