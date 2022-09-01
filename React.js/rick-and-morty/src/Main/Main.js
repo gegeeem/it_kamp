@@ -4,6 +4,8 @@ import Location from "../Location/Location";
 import Resident from "../Residents/Residents";
 import Residents from "../Residents/Residents";
 import ListOfResidents from "../LisOfResidents/ListOfResidents";
+import Character from "../Character/Character";
+import "./Main.css";
 
 const BASE_URL = "https://rickandmortyapi.com/api";
 
@@ -39,7 +41,7 @@ export default function Main() {
     getData(ctg, page, statusCharacter);
   }, [page, ctg, statusCharacter]); //if page cnahge or category from selected list turn on useEffect
   return (
-    <div>
+    <div className="main-container">
       <button
         disabled={nextPrevPage.prev !== null ? false : true} //if prev page don t exist disable button
         onClick={() => {
@@ -91,14 +93,9 @@ export default function Main() {
         </>
       )}
       {ctg === "character" ? (
-        <ul>
+        <ul className="list-main">
           {category.map((actor) => (
-            <li key={actor.id}>
-              <h3>{actor.name}</h3>
-              <p>{actor.gender}</p>
-              <p>{actor.status}</p>
-              <img src={actor.image} />
-            </li>
+            <Character key={actor.id} character={actor} />
           ))}
         </ul>
       ) : ctg === "location" ? (
