@@ -71,19 +71,24 @@ export default function Main() {
         <option value="episode">Episode</option>
       </select>
       {ctg === "character" && (
-        <select
-          value={statusCharacter}
-          onChange={(e) =>
-            setStatusCharacter(() => {
-              setPage(""); //reset to first page after change category
-              return e.target.value; // catch value from option and add to ctg state
-            })
-          }
-        >
-          <option value="alive">Alive</option>
-          <option value="dead">Dead</option>
-          <option value="unknow">Unknow</option>
-        </select>
+        <>
+          <label htmlFor="status">Status</label>
+          <select
+            name="status"
+            value={statusCharacter}
+            onChange={(e) =>
+              setStatusCharacter(() => {
+                setPage(1); //reset to first page after change category
+                return e.target.value; // catch value from option and add to ctg state
+              })
+            }
+          >
+            <option value="">----</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknow">Unknow</option>
+          </select>
+        </>
       )}
       {ctg === "character" ? (
         <ul>
@@ -91,6 +96,7 @@ export default function Main() {
             <li key={actor.id}>
               <h3>{actor.name}</h3>
               <p>{actor.gender}</p>
+              <p>{actor.status}</p>
               <img src={actor.image} />
             </li>
           ))}
