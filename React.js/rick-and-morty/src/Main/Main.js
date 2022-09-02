@@ -65,7 +65,7 @@ export default function Main() {
       <form onSubmit={(e) => e.preventDefault()}>
         Species
         <input
-          defaultValue="alien...,human... etc"
+          placeholder="alien...,human... etc"
           onFocus={(e) => {
             e.target.value = "";
           }}
