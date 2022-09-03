@@ -1,17 +1,17 @@
 import { useState } from "react";
 export default function AddTask() {
-  const [task, setTask] = useState("");
+  const [text, setText] = useState("");
   return (
     <div>
       <input
         placeholder="Add task.."
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
       />
       <button
         onClick={() => {
-          console.log("uneli ste: ", task);
-          setTask("");
+          console.log("uneli ste: ", text);
+          setText("");
         }}
       >
         Add
