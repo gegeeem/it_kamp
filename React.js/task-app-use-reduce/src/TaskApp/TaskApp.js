@@ -22,17 +22,30 @@ export default function TaskApp() {
       return [
         ...prev,
         {
-          id: nextId,
+          id: nextId++,
           text: text,
           done: false,
         },
       ];
     });
   }
-  function handleChangeTask(currentTask) {
+  function handleChangeTask(currentTask, text) {
     setTask(
       tasks.map((el) => {
         if (el.id === currentTask.id) {
+          currentTask = { ...el, text: text };
+          return currentTask;
+        } else {
+          return el;
+        }
+      })
+    );
+  }
+  function handleIsCheckedTask(currentTask) {
+    setTask(
+      tasks.map((el) => {
+        if (el.id === currentTask.id) {
+          currentTask = { ...el, done: !el.done };
           return currentTask;
         } else {
           return el;
@@ -41,17 +54,17 @@ export default function TaskApp() {
     );
   }
 
-  function handleDeleteTask(currentTask) {
-    setTask(tasks.filter((el) => el !== currentTask.id));
+  function handleDeleteTask(currentTaskId) {
+    setTask(tasks.filter((el) => el.id !== currentTaskId));
   }
-  console.log("TaskAp", tasks);
   return (
     <div>
       <AddTask addingTaskFunc={handleAddTask} />
       <TaskList
-        task={tasks}
+        tasks={tasks}
         onChangeTask={handleChangeTask}
         onDeleteTask={handleDeleteTask}
+        isDoneTask={handleIsCheckedTask}
       />
     </div>
   );

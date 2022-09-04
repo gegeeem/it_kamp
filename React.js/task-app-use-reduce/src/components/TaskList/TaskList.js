@@ -1,20 +1,24 @@
 import { useState } from "react";
 import Task from "../Task/Task";
 
-export default function TaskList({ task, onDeleteTask, onChangeTask }) {
-  console.log(task);
+export default function TaskList({
+  tasks,
+  onDeleteTask,
+  onChangeTask,
+  isDoneTask,
+}) {
   return (
     <ul>
-      {/* {task.map((el) => (
-        <Task
-          key={el.id}
-          task={task}
-          onEditTask={() => onChangeTask(el.id)}
-          onDeleteTask={() => {
-            onDeleteTask(el.id);
-          }}
-        />
-      ))} */}
+      {tasks.map((el) => (
+        <li key={el.id}>
+          <Task
+            currentTask={el}
+            onEditTask={onChangeTask}
+            onDeleteTask={onDeleteTask}
+            isCheckedFunc={isDoneTask}
+          />
+        </li>
+      ))}
     </ul>
   );
 }

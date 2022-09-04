@@ -1,22 +1,26 @@
 import { useState } from "react";
 
-export default function ({ task, onDeleteTask, onEditTask }) {
-  const [edit, setEdit] = useState(false);
+export default function ({
+  currentTask,
+  onDeleteTask,
+  onEditTask,
+  isCheckedFunc,
+}) {
+  const [isEdit, setIsEdit] = useState(false);
 
   return (
     <>
-      {edit === true ? (
+      {isEdit === true ? (
         <>
           <input
-            value={task.text}
+            value={currentTask.text}
             onChange={(e) => {
-              setText(e.target.value);
+              onEditTask(currentTask, e.target.value);
             }}
           />{" "}
           <button
-            onClick={(e) => {
-              setText(e.target.value);
-              setEdit(false);
+            onClick={() => {
+              setIsEdit(false);
             }}
           >
             Save
@@ -25,16 +29,14 @@ export default function ({ task, onDeleteTask, onEditTask }) {
       ) : (
         <>
           <input
-            type={"checkbox"}
-            checked={checked}
-            onChange={() => {
-              setChecked((prev) => !prev);
-            }}
+            type="checkbox"
+            checked={currentTask.done}
+            onChange={() => isCheckedFunc(currentTask)}
           />
-          {task}
+          {currentTask.text}
           <button
             onClick={() => {
-              setEdit(true);
+              setIsEdit(true);
             }}
           >
             {" "}
@@ -42,7 +44,7 @@ export default function ({ task, onDeleteTask, onEditTask }) {
           </button>
         </>
       )}
-      <button onClick={onEditTask}>Delete</button>
+      <button onClick={() => onDeleteTask(currentTask.id)}>Delete</button>
     </>
   );
 }
