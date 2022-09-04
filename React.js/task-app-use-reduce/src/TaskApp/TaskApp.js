@@ -1,6 +1,8 @@
 import { useState } from "react";
+import AddTask from "../components/AddTask/AddTask";
 import TaskList from "../components/TaskList/TaskList";
 
+let nextId = 2;
 export default function TaskApp() {
   const [tasks, setTask] = useState([
     {
@@ -8,14 +10,19 @@ export default function TaskApp() {
       text: "First wish",
       done: true,
     },
+    {
+      id: 1,
+      text: "Second ",
+      done: false,
+    },
   ]);
 
   function handleAddTask(text) {
     setTask((prev) => {
-      [
+      return [
         ...prev,
         {
-          id: nextId++,
+          id: nextId,
           text: text,
           done: false,
         },
@@ -37,12 +44,15 @@ export default function TaskApp() {
   function handleDeleteTask(currentTask) {
     setTask(tasks.filter((el) => el !== currentTask.id));
   }
-
+  console.log("TaskAp", tasks);
   return (
-    <TaskList
-      task={tasks}
-      onChangeTask={handleChangeTask}
-      onDeleteTask={handleDeleteTask}
-    />
+    <div>
+      <AddTask addingTaskFunc={handleAddTask} />
+      <TaskList
+        task={tasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
+      />
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function AddTask() {
+export default function AddTask({ addingTaskFunc }) {
   const [text, setText] = useState("");
   return (
     <div>
@@ -10,7 +10,7 @@ export default function AddTask() {
       />
       <button
         onClick={() => {
-          console.log("uneli ste: ", text);
+          addingTaskFunc(text);
           setText("");
         }}
       >
