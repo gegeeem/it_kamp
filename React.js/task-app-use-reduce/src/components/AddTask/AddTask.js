@@ -1,3 +1,4 @@
+import { toBeEnabled } from "@testing-library/jest-dom/dist/matchers";
 import { useState } from "react";
 export default function AddTask({ addingTaskFunc }) {
   const [text, setText] = useState("");
@@ -8,14 +9,19 @@ export default function AddTask({ addingTaskFunc }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button
-        onClick={() => {
-          addingTaskFunc(text);
-          setText("");
-        }}
-      >
-        Add
-      </button>
+      {text ? (
+        <button
+          disabled={false}
+          onClick={() => {
+            addingTaskFunc(text);
+            setText("");
+          }}
+        >
+          Add
+        </button>
+      ) : (
+        <button disabled={true}>Add</button>
+      )}
     </div>
   );
 }

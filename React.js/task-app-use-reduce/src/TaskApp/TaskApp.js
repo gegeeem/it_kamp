@@ -1,61 +1,101 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import AddTask from "../components/AddTask/AddTask";
 import TaskList from "../components/TaskList/TaskList";
+import taskReducer from "../components/Reducer functions/tasksReducer";
 
 let nextId = 2;
+const initialTask = [
+  {
+    id: 0,
+    text: "First wish",
+    done: true,
+  },
+  {
+    id: 1,
+    text: "Second ",
+    done: false,
+  },
+];
 export default function TaskApp() {
-  const [tasks, setTask] = useState([
-    {
-      id: 0,
-      text: "First wish",
-      done: true,
-    },
-    {
-      id: 1,
-      text: "Second ",
-      done: false,
-    },
-  ]);
+  // const [tasks, setTask] = useState([
+  //   {
+  //     id: 0,
+  //     text: "First wish",
+  //     done: true,
+  //   },
+  //   {
+  //     id: 1,
+  //     text: "Second ",
+  //     done: false,
+  //   },
+  // ]);
+
+  // function handleAddTask(text) {
+  //   setTask((prev) => {
+  //     return [
+  //       ...prev,
+  //       {
+  //         id: nextId++,
+  //         text: text,
+  //         done: false,
+  //       },
+  //     ];
+  //   });
+  // }
+  const [tasks, dispatch] = useReducer(taskReducer, initialTask);
 
   function handleAddTask(text) {
-    setTask((prev) => {
-      return [
-        ...prev,
-        {
-          id: nextId++,
-          text: text,
-          done: false,
-        },
-      ];
+    dispatch({
+      type: "added",
+      id: nextId++,
+      text: text,
     });
   }
+  // function handleChangeTask(currentTask, text) {
+  //   setTask(
+  //     tasks.map((el) => {
+  //       if (el.id === currentTask.id) {
+  //         currentTask = { ...el, text: text };
+  //         return currentTask;
+  //       } else {
+  //         return el;
+  //       }
+  //     })
+  //   );
+  // }
   function handleChangeTask(currentTask, text) {
-    setTask(
-      tasks.map((el) => {
-        if (el.id === currentTask.id) {
-          currentTask = { ...el, text: text };
-          return currentTask;
-        } else {
-          return el;
-        }
-      })
-    );
+    dispatch({
+      type: "changed",
+      currentTask,
+    });
   }
+  // function handleIsCheckedTask(currentTask) {
+  //   setTask(
+  //     tasks.map((el) => {
+  //       if (el.id === currentTask.id) {
+  //         currentTask = { ...el, done: !el.done };
+  //         return currentTask;
+  //       } else {
+  //         return el;
+  //       }
+  //     })
+  //   );
+  // }
   function handleIsCheckedTask(currentTask) {
-    setTask(
-      tasks.map((el) => {
-        if (el.id === currentTask.id) {
-          currentTask = { ...el, done: !el.done };
-          return currentTask;
-        } else {
-          return el;
-        }
-      })
-    );
+    dispatch({
+      type: "isCheckedDone",
+      currentTask,
+    });
   }
 
+  // function handleDeleteTask(currentTaskId) {
+  //   setTask(tasks.filter((el) => el.id !== currentTaskId));
+  // }
   function handleDeleteTask(currentTaskId) {
-    setTask(tasks.filter((el) => el.id !== currentTaskId));
+    dispatch({
+      type: "deleted",
+      id: currentTaskId,
+    });
   }
   return (
     <div>

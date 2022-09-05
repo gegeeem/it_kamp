@@ -12,12 +12,7 @@ export default function ({
     <>
       {isEdit === true ? (
         <>
-          <input
-            value={currentTask.text}
-            onChange={(e) => {
-              onEditTask(currentTask, e.target.value);
-            }}
-          />{" "}
+          <input value={currentTask.text} onChange={onEditTask} />{" "}
           <button
             onClick={() => {
               setIsEdit(false);
@@ -31,7 +26,7 @@ export default function ({
           <input
             type="checkbox"
             checked={currentTask.done}
-            onChange={() => isCheckedFunc(currentTask)}
+            onChange={isCheckedFunc}
           />
           {currentTask.text}
           <button
@@ -44,7 +39,7 @@ export default function ({
           </button>
         </>
       )}
-      <button onClick={() => onDeleteTask(currentTask.id)}>Delete</button>
+      <button onClick={onDeleteTask}>Delete</button>
     </>
   );
 }
