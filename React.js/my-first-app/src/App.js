@@ -163,70 +163,72 @@ function App() {
   //   </div>
   // )
 
-  const [authors, setAuthor] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [authors, setAuthor] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  const [page, setPage] = useState(1);
-  const [pagination, setPagination] = useState({}); /// jednu stranicu i broj starnica; page i total page u objektu na http
+  // const [page, setPage] = useState(1);
+  // const [pagination, setPagination] = useState({}); /// jednu stranicu i broj starnica; page i total page u objektu na http
 
-  const BASE_URL = "https://api.quotable.io";
-  function getQuote(page) {
-    setLoading(true);
-    try {
-      axios
-        .get(`${BASE_URL}/authors?sortBy=quoteCount&page=${page}&limit=15`)
-        .then((res) => {
-          console.log(res.data);
-          setAuthor(res.data.results);
+  // const BASE_URL = "https://api.quotable.io";
+  // function getQuote(page) {
+  //   setLoading(true);
+  //   try {
+  //     axios
+  //       .get(`${BASE_URL}/authors?sortBy=quoteCount&page=${page}&limit=15`)
+  //       .then((res) => {
+  //         console.log(res.data);
+  //         setAuthor(res.data.results);
 
-          setPagination({
-            page: res.data.page,
-            lastPage: res.data.totalPage,
-          });
-        });
-    } catch (e) {
-      alert(e);
-    } finally {
-      setLoading(false);
-    }
-  }
-  useEffect(() => {
-    getQuote(page);
-  }, [page]);
-  return (
-    <div className="card-container">
-      {pagination.page / pagination.lastPage}
-      <button
-        onClick={() => {
-          setPage(page + 1);
-        }}
-      >
-        {console.log(page)}next
-      </button>
-      {!loading ? (
-        <div>
-          {authors.map((author) => (
-            <div key={author._id}>
-              <h4>{author.name}</h4>
-              <h5>{author.description}</h5>
-              <p>{author.bio}</p>
-            </div>
-          ))}
-        </div>
-      ) : (
-        "Loading"
-      )}
+  //         setPagination({
+  //           page: res.data.page,
+  //           lastPage: res.data.totalPage,
+  //         });
+  //       });
+  //   } catch (e) {
+  //     alert(e);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
+  // useEffect(() => {
+  //   getQuote(page);
+  // }, [page]);
+  // return (
+  //   <div className="card-container">
+  //     {pagination.page / pagination.lastPage}
+  //     <button
+  //       onClick={() => {
+  //         setPage(page + 1);
+  //       }}
+  //     >
+  //       {console.log(page)}next
+  //     </button>
+  //     {!loading ? (
+  //       <div>
+  //         {authors.map((author) => (
+  //           <div key={author._id}>
+  //             <h4>{author.name}</h4>
+  //             <h5>{author.description}</h5>
+  //             <p>{author.bio}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     ) : (
+  //       "Loading"
+  //     )}
 
-      {authors.map((author) => (
-        <div key={author._id}>
-          <h4>{author.name}</h4>
-          <h5>{author.description}</h5>
+  //     {authors.map((author) => (
+  //       <div key={author._id}>
+  //         <h4>{author.name}</h4>
+  //         <h5>{author.description}</h5>
 
-          <p>{author.bio}</p>
-        </div>
-      ))}
-    </div>
-  );
+  //         <p>{author.bio}</p>
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
+  return <div
+  ></div>;
 }
 
 export default App;
