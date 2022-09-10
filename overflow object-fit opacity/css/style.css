@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    height: 96vh;
+    width: calc(5*95vw);
+    background-color: aqua;
+}
+.el{
+    position: relative;
+    height: 100%;
+    width: 95vw;
+    display: inline-block;
+}
+.m1{
+    background-color: aliceblue;
+}
+.m2{
+    background-color: antiquewhite;
+}
+.m3{
+    background-color: rgb(128, 146, 146);
+}
+.m4{
+    background-color: bisque;
+}
+.m5{
+    background-color: blueviolet;
+}
+.hover{
+    
+    position: absolute;
+    top:45vh;
+    left:42vw;
+    color: white;
+    font-size: 5vh;
+    border: 3px solid white;
+    padding-bottom: 0.2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 8px;
+    opacity: 0.6;
+
+
+}
+img{
+    width: 95vw;
+    height: 96vh;
+    object-fit: cover;
+}
+.img3{
+    object-position: 0px -200px;
+}
+.img5{
+    object-position: 0px -350px;
+}
+.hover:hover{
+    background-color: rgba(236, 240, 243, 0.5);
+    opacity: 0.9;
+    
+}

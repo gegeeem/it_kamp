@@ -1,0 +1,1302 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+@font-face {
+    font-family: "DM Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2");
+}
+@font-face { font-family: "Quicksand"; src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-wg.woff2");}
+
+
+@font-face {
+    font-family: "Lobster";
+    src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
+}
+
+body{
+    margin: 0;
+    font-family: "DM Sans",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+/* header */
+header{
+    position:sticky;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    z-index: 5;
+    background-color: #fff;
+}
+.container-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-header{
+    position:relative;
+    padding: 15px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+}
+.logo>img{
+    display: block;
+    padding: 0;
+}
+.logo>a{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.order > a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Quicksand",sans-serif;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    background-size: 200%;
+    border-radius: 30px;
+    padding: 13px 37px;
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+.mobile-links{
+    display: none;
+}
+/* .mobile-menu{
+    display: none; 
+} */
+.links> ul{
+    display: flex;
+    align-items: center;
+}
+.links>ul>li>a{
+    font-family: "Quicksand",sans-serif;
+    color: #5E5E5E;
+    font-weight: 500;
+    padding: 28px 20px;
+    font-size: 16px;
+}
+.order > span{
+    color:#f04506;
+    font-family: "Quicksand",sans-serif;
+}
+.order > span > i{
+    transform: rotate(90deg);
+}
+/* end header */
+/* main section */
+main{
+    
+}
+
+.container{
+    position: relative;
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 820px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+.text-over-img{
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 50%;
+}
+.text-over-img > h1{
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    font-family: 'Quicksand',sans-serif;
+}
+.text-over-img>p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.text-over-img > .delicious{
+    position: absolute;
+    left: 0px;
+    top: -230px;
+
+}
+.delicious > h2{
+    font-size: 160px;
+    font-family: "Lobster",cursive;
+    color: rgba(240,69,6,.06);
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+.explore-btn > a{
+    font-size: 22px;
+    font-weight: 400;
+    padding: 15px 45px;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    font-family: "DM Sans", sans-serif;
+}
+    /* button for all */
+    .btn{
+        color: #fff;
+        border-radius: 30px;
+        display: inline-block;
+        background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+        font-family: "DM Sans", sans-serif;
+        
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        display: inline-block;
+        background-size: 200%;
+        transition: .6s;
+        background-color: transparent;
+    }
+    /* end button for all */
+
+
+/* most popular */
+.most-popular{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.container-popular{
+    padding: 110px 0px;
+    max-width: 1200px;
+}
+.slider-cake{
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-around;
+    align-items: center;
+    /* gap:30px; */
+   
+}
+.justify-align{
+    text-align: center;
+}
+.justify-align > span{
+    color: #f04506;
+}
+    .justify-align > h1{
+        display: block;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: "Quicksand",sans-serif;
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+    }
+/* end most popular */
+
+/* end main section */
+
+
+/* Kartice sa kolacima */
+.description-cake{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .description-cake > a{
+    padding: 13px 37px;
+}
+.description-cake>p{
+    padding: 0 30px;
+} */
+.description-cake > h4{
+    font-family: "Quicksand",sans-serif;
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom:0 ;
+}
+.description-cake > a{
+    font-family: "Quicksand Light Regular",sans-serif;
+    border: none;
+    padding: 13px 37px;
+}
+.description-cake > p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-weight: 400;
+    padding: 0 30px;
+    text-align: center;
+    font-family: "DM Sans",sans-serif;
+}
+.slider-container{
+    display: flex;
+    /* justify-content: center; ovo ne treba*/ 
+    align-items: center;
+    width: 1200px;
+    overflow: auto;
+    scrollbar-width: thin;
+    /* width: 100%; */
+    /* gap:30px; */
+}
+.slider-cake{
+   
+
+    
+    /* width: 100%; */
+    
+    
+}
+.card-frame{
+    flex: 0 0 calc(100% / 3);
+    padding: 0px 15px;
+}
+.cake-card{
+    /* flex:0 0 calc(33.33333% - 30px);  */
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color:  #fff5f2;
+    padding: 20px;
+    border-bottom-right-radius: 40px;
+    margin-bottom: 30px;
+}
+.img-container{
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    width: auto;
+}
+.img-container > img{
+    width: 100%;
+    display: block;
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.img-container>img:hover{
+    transform: scale(1);
+}
+.description-cake{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.description-cake > h4{
+    font-family: "Quicksand",sans-serif, url(https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2);
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom:0 ;
+}
+.description-cake > a{
+    font-family: "Quicksand Light Regular",sans-serif;
+    border: none;
+    padding: 13px 37px;
+}
+.description-cake > p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-weight: 400;
+    padding: 0 30px;
+}
+/* kraj kartice sa kolacima */
+/* End kartice sa klacima */
+/* Our story */
+.our-story{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding-bottom: 110px;
+}
+.about-our-story{
+    flex:  0 0 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.head-our-story{
+    margin-bottom: 30px;
+}
+.head-our-story > span{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 22px;
+    font-family: "DM Sans",sans-serif;
+    display: inline-block;
+    color: #f04506;
+    letter-spacing: .2em;
+}
+.head-our-story > h2{
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-family: "Quicksand",sans-serif;
+    color: #000;
+    margin-top: 0;
+    font-style: normal;
+}
+.about-container>p{
+    font-family: "DM Sans",sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+.text-btn>a{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Quicksand",sans-serif;
+    box-shadow: 0 17px 27px rgba(240,69,6,.27);
+    z-index: 1;
+    padding: 13px 37px;
+}
+
+/* our features */
+
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #fff5f2;
+}
+.container-features{
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+.header-features{
+    margin-bottom: 70px;
+    text-align: center;
+}
+.header-features span{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 22px;
+    font-family: "DM Sans",sans-serif;
+    display: inline-block;
+    color: #f04506;
+    letter-spacing: .2em;
+}
+.header-features h2{
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+.features-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.cards{
+    flex: 0 0 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 47px 17px;
+    background: #fff; /*on hover*/
+}
+.desciption-card{
+    padding: 0px 16px;
+    text-align: center;
+}
+.desciption-card  a{
+    font-family: "Quicksand",sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.desciption-card > p{
+    font-family: "DM Sans",sans-serif;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+/* end our fetures */
+
+/* video */
+.video{
+    width: 100%;
+    height: 600px;
+    background-image: url("/images/background\ video.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden ;
+
+}
+.icon-video{
+
+}
+.icon-video a{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    width: 100px;
+    height: 100px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.icon-video  i{
+    display: block;
+    font-size: 30px;
+    color: #ff9f67;
+    margin-left: 3px;
+    
+    
+}
+/* end video */
+
+/* Clients say */
+.client-say{
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.client-say-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.client-say-title span{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 22px;
+    font-family: "DM Sans",sans-serif;
+    display: inline-block;
+    color: #f04506;
+    letter-spacing: .2em;
+}
+.client-say-title h2{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+
+.cards-clients{
+    display: flex;
+    gap: 15px;
+    overflow: auto;
+    scrollbar-width: thin;
+    max-width: 1200px;
+
+}
+.card-clnt{
+    flex:1 0 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-right-radius: 60px;
+    margin-top:10px;
+    padding: 30px 15px 40px 15px;
+    box-shadow:0 20px 20px rgba(240,69,6,.1);
+    
+}
+.card-clnt>p{
+    font-size: 24px;
+    font-family: "DM sans", sans-serif;
+    line-height: 30px;
+}
+.client-name-img{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.name-profession{
+    display: flex;
+   flex-direction: column;
+    align-items: flex-start;
+}
+.img-client{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img-client img{
+    display: block;
+}
+.name-profession p{
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #5e5e5e;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 60%;
+    
+}
+.name-profession span{
+    color: #f04506;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0;
+    line-height: 80%;
+}
+/* end clients say */
+
+/* insta cake */
+.insta-cake{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+.insta-img{
+    flex:0 0 25%;
+    position: relative;
+    /* overflow: hidden; */
+}
+.insta-img a{
+    position: absolute;
+}
+.insta-img img{
+    width: 100%;
+}
+/* end insta cake */
+
+
+/* Footer */
+footer{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF5F2;
+    font-family: "DM Sans",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #5E5E5E;
+}
+.ftr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 20px;
+    /* padding-left: -30px;
+    padding-right: -30px; */
+}
+.flex-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    max-width: 1400px;
+    gap:25px;
+    
+}
+.lnks-ftr{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a{
+    font-family: "DM Sans",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #5E5E5E;
+}
+.ftr-lg{
+    margin-bottom: 35px;
+}
+.social-network{
+    flex: 0 0 33.33%;
+}
+.quick-links, cakes{
+    flex: 0 0 16.6666%;
+}
+.social-network > p{
+    color: #5E5E5E;
+    font-size: 16px;
+    margin-bottom: 21px;
+}
+.social-footer i{
+    padding: 9px;
+    color: #d83e06;
+    font-size: 24px;
+}
+.copyrights{
+    text-align: center;
+    padding: 0 10px;
+}
+.lnks-ftr{
+align-self: start;
+}
+.lnks-ftr h4{
+    font-family: "Quicksand", light light;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    padding-top: 0;
+    margin-top: 0;
+}
+.lnks-ftr>ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.lnks-ftr>ul>li{
+    padding: 20px 0;;
+}
+.contact-us a{
+    color: #d83e06;
+    font-size: 20px;
+}
+@media only screen and (max-width: 980px){
+    .order > span{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 830px) {
+    @font-face {
+        font-family: "DM Sans";
+        src: url("https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2");
+    }
+    @font-face {
+        font-family:"Quicksand" ;
+        src: url("https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkBgv58a-wg.woff2");
+    }
+    @font-face {
+        font-family: "Lobster";
+        src: url("https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2");
+    }
+    h4{
+        font-family: "Quicksand", sans-serif;
+    }
+
+    /* .container-menu{
+        position: relative;
+    } */
+    .main-header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mobile-links{
+        position: absolute;
+        top: 70px;
+        left:15px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        background-color: #575b5f;
+        color: #fff;
+        padding: 10px;;
+    }
+    .lnks-toggle{
+        display: none;
+    }
+    .lnks-toggle>ul{
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .lnks-toggle>ul>li{
+        
+        width: 100%;
+    }
+    .lnks-toggle a{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+    }
+    .links>ul{
+        display: none;
+
+    }
+
+    .mobile-menu{
+        /* padding: 15px;
+        position: absolute;
+        bottom: -48px;
+        width: 100%;
+        z-index: 99;
+        background-color: antiquewhite; */
+        display: block;
+        text-align: center;
+        background-color: rgb(20, 20, 20);
+        padding: 5px;
+        align-self: flex-end;
+    }
+    #hamburger{
+        position:absolute;
+        z-index: -1000;
+    }
+    #hamburger:checked ~ .lnks-toggle{
+        display: block;
+    }
+    
+    .container{
+        min-height: 450px;
+    }
+    /* main section */
+main{
+    
+}
+
+.container{
+    position: relative;
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 150px;
+}
+.flex-container{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text-over-img{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1 0 50%
+}
+.text-over-img > h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    font-family: 'Quicksand',sans-serif;
+}
+.text-over-img > .delicious{
+    position: absolute;
+    left: -6px;
+    top: -120px;
+
+}
+.delicious > h2{
+    font-size: 79px;
+    font-family: "Lobster",cursive;
+    color: rgba(240,69,6,.06);
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+.explore-btn > a{
+    font-size: 22px;
+    font-weight: 400;
+    padding: 15px 45px;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+    font-family: "DM Sans", sans-serif;
+}
+    /* button for all */
+    .btn{
+        color: #fff;
+        border-radius: 30px;
+        display: inline-block;
+        background-image: linear-gradient(to left,#f04506,#d83e06,#f04506);
+        font-family: "DM Sans", sans-serif;
+        
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        display: inline-block;
+        background-size: 200%;
+        transition: .6s;
+        background-color: transparent;
+    }
+    /* end button for all */
+    /* most popular */
+        .most-popular{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .container-popular{
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .justify-align{
+            text-align: center;
+            margin-bottom: 60px;
+            line-height: 60%;
+        }
+        .justify-align > span{
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            font-family: "DM Sans",sans-serif;
+            display: inline-block;
+            color: #f04506;
+            letter-spacing: .2em;
+           
+        }
+        .justify-align > h2{
+            display: block;
+            font-size: 23px;
+            
+        }
+        /* kartice sa kolacima */
+        .slider-cake{
+            overflow: auto;
+            padding-left: 0px;
+            /* display: flex;
+            gap:20px; */
+            
+        }
+        .cake-card{
+            flex:1 0 calc(100vw - 2*15px);
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            background-color:  #fff5f2;
+            padding: 20px;
+            border-bottom-right-radius: 60px;
+            margin-bottom: 0px;
+        }
+        .img-container{
+            border-bottom-right-radius: 40px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .img-container > img{
+            width: 100%;
+        }
+        .description-cake{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .description-cake > h4{
+            font-family: "Quicksand",sans-serif, url(https://fonts.gstatic.com/s/quicksand/v28/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkCEv58a-wg.woff2);
+            color: #000;
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom:0 ;
+        }
+        .description-cake > a{
+            font-family: "Quicksand Light Regular",sans-serif;
+            border: none;
+            padding: 13px 37px;
+            font-size: 18px;
+        }
+        .description-cake > p{
+            font-size: 16px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            font-weight: 400;
+            padding: 0 30px;
+        }
+        /* kraj kartice sa kolacima */
+    /* end most popular */
+
+    /* Our story */
+    .our-story{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container-popular-img{
+        flex: 0 0 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    .container-img{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container-img > img{
+        width: 100%;
+        object-fit: cover;
+        /* object-position: -20px 0px; */
+    }
+    .about-our-story{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .head-our-story{
+        margin-bottom: 30px;
+    }
+    .head-our-story > span{
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .head-our-story > h2{
+        font-size: 23px;
+        margin-bottom: 30px;
+        font-family: "Quicksand",sans-serif;
+        color: #000;
+        margin-top: 0;
+        font-style: normal;
+    }
+    .about-container>p{
+        font-family: "DM Sans",sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        margin-top: 0px;
+        line-height: 30px;
+    }
+    .text-btn>a{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Quicksand",sans-serif;
+        box-shadow: 0 17px 27px rgba(240,69,6,.27);
+        z-index: 1;
+        padding: 13px 37px;
+    }
+    /* end our story */
+
+    /* Our Features */
+    .features{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #fff5f2;
+    }
+    .container-features{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    .header-features{
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .header-features span{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .header-features h2{
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    .features-cards{
+        flex-direction: column;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 47px 17px;
+    }
+    .desciption-card{
+        padding: 0px 16px;
+        text-align: center;
+    }
+    .desciption-card  a{
+        font-family: "Quicksand",sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .desciption-card > p{
+        font-family: "DM Sans",sans-serif;
+        color: #000;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    /* end Our Features */
+
+    /* video */
+    .video{
+        width: 100%;
+        height: 300px;
+        background-image: url("/images/background\ video.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .icon-video a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-video  i{
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        color: #ff9f67;
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+    }
+    /* end video */
+    /* Client say */
+    .client-say{
+        padding-top: 50px;
+        padding-bottom: 40px;
+        width: 100vw;
+    }
+    .client-say-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .client-say-title span{
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 22px;
+        font-family: "DM Sans",sans-serif;
+        display: inline-block;
+        color: #f04506;
+        letter-spacing: .2em;
+    }
+    .client-say-title h2{
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+
+
+    .cards-clients{
+        overflow: auto;
+        padding: 50px 0px;
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+    .card-clnt{
+        flex:0 0 90vw;
+        border-bottom-right-radius: 60px;
+        margin-top:10px;
+        padding: 30px 15px 40px 15px;
+        box-shadow:0 20px 20px rgba(240,69,6,.1);
+        
+    }
+    .card-clnt>p{
+        font-size: 20px;
+        font-family: "DM sans", sans-serif;
+        line-height: 30px;
+    }
+    .client-name-img{
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+    .name-profession{
+        display: flex;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .img-client{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .img-client img{
+        display: block;
+    }
+    .name-profession p{
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        color: #5e5e5e;
+        font-weight: 300;
+        padding: 0;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 60%;
+        
+    }
+    .name-profession span{
+        color: #f04506;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 0;
+        line-height: 80%;
+    }
+    /* end client say */
+
+    /* insta cake */
+    .insta-cake{
+        display: flex;
+        align-items: center;
+        overflow: auto;
+    }
+    .insta-img{
+        flex:1 0 50vw;
+        position: relative;
+        /* overflow: hidden; */
+    }
+    .insta-img a{
+        position: absolute;
+    }
+    .insta-img img{
+        width: 100%;
+    }
+    /* end insta cake */
+
+
+    /* Fooeter */
+    footer{
+        background-color: #FFF5F2;
+        font-family: "DM Sans",sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        color: #5E5E5E;
+    }
+    footer a{
+        font-family: "DM Sans",sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        color: #5E5E5E;
+    }
+    .ftr{ /*dodatna klasa u samom containeru-feature*/
+        
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    .flex-footer{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ftr-lg{
+        margin-bottom: 35px;
+    }
+    .social-network > p{
+        color: #5E5E5E;
+        font-size: 16px;
+        margin-bottom: 21px;
+    }
+    .social-footer i{
+        padding: 9px;
+        color: #d83e06;
+        font-size: 24px;
+    }
+    .copyrights{
+        text-align: center;
+        padding: 0 10px;
+    }
+.lnks-ftr{
+    align-self: start;
+}
+    .lnks-ftr h4{
+        font-family: "Quicksand", light light;
+        font-size: 20px;
+        margin-bottom: 40px;
+        font-weight: 300;
+    }
+    .lnks-ftr>ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    .lnks-ftr>ul>li{
+        padding: 8px 0px;
+    }
+    .contact-us a{
+        color: #d83e06;
+        font-size: 20px;
+    }
+}

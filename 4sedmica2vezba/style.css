@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #E5E3C9;
+}
+.nav{
+    height: 10vh;
+    background-color: rgb(120, 147, 149);
+}
+.ime{
+    width: 20vw;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(90, 120, 122);;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40vh;
+    background-color: rgb(148, 180, 159);
+}
+.citati{
+    width: 300px;
+    height: 250px;
+    
+}
+.citati > h2{
+text-align: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin-top: 10px;
+    
+}
+.card>img{
+    display: block;
+    width: 100%;
+}
+.vidljivost{
+    height: 150px;
+    width: 280px;
+    overflow: hidden;
+}
+.popust{
+    position: absolute;
+    background-color: red;
+    top: -5px;
+    right: -5px;
+}
+.autori{
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-evenly;
+    height: 40vh;
+    background-color: rgb(180, 207, 176);
+}
+.autor1, .autor2, .autor3{
+    margin-top: 10px;
+}
+.footer{
+    height: 10vh;
+    background-color: rgb(120, 147, 149);
+
+}

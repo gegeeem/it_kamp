@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.card{
+    height: 90vh;
+    width: 60vh;
+    margin-top: 10px;
+    background-color: rgb(183, 200, 216);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 2px solid rgb(183, 200, 216);
+}
+.img_div{
+    width: 50vh;
+    height: 70vh;
+    margin:auto;
+    margin-top: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+}
+.img_div>img{
+    display: block;
+    width: 60vh;
+    height: 65vh;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.description{
+    width: 50vh;
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+.description > h2{
+    text-align: center;
+   font-size: 5vh;
+}

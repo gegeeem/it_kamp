@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+.weatherApp-container{
+    max-width: 350px;
+    min-height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+}
+.weatherInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.mapIcon{
+    width: 15px;
+    color: aliceblue;
+}
+.svgMap{
+    fill:rgb(204, 206, 207);
+}
+.weatherInfo>h2{
+    color: rgb(204, 206, 207);
+}
+.mapIcon{
+    display: inline-block;
+    margin-left: 3px;
+}
+.cold{
+    background-image: url('/src/images/cold.jpg');
+}
+.cool{
+    background-image: url('https://e3.365dm.com/21/06/2048x1152/skynews-sun-weather_5415028.jpg');
+}
+.warm-to-hot{
+    background-image: url('https://media.istockphoto.com/photos/hot-summer-or-heat-wave-background-picture-id1254065595?k=20&m=1254065595&s=612x612&w=0&h=T6XKPDmqpzpuFoA4jnNvOni5GahC7OcROLDwC88Oe5o=');
+}
+
+.temperature{
+    color: rgb(242, 245, 247);
+    font-size: 80px;
+}
+.attention{
+    background-color: rgb(199, 44, 44);
+    width: 90%;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(218, 212, 212);
+}
+.temperatureGenerator{
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.temperatureGenerator:hover{
+background-color: rgb(198, 207, 214);
+}

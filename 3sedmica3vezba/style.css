@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/*.flex{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.prvi, .drugi, .treci, .cetvrti{
+    height: 80px;
+    width: 25%;
+
+}
+.prvi{
+    background-color: aliceblue;
+}
+.drugi{
+    background-color: aqua;
+}
+.treci{
+    background-color: beige;
+}
+.cetvrti{
+    background-color: brown;
+}*/
+/* .vh-vw{
+    height: 100vh;
+    width: 50vw;
+    background-color: rgb(178, 198, 216);
+}
+.nav{
+    height: 20vh;
+    background-color: rgb(154, 190, 190);
+} */
+
+
+html{
+    font-size: 10px;/*preporka da bude 10px*/
+}
+h1{
+    font-size: 2rem;
+} 
+
+.em{
+    font-size: 20px;
+}
+span{
+    font-size: 1em;
+}

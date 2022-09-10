@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+/* div{
+    width: 300px;
+    height: 250px;
+    border: 2px solid orange;
+    margin-left: auto;
+    margin-right: auto; */
+    /*oveflow: visible po default-u kod svakog elementa*/
+    /* overflow: auto; */
+    /*overflow: auto se ponasa u zavisnsti od sardzaja diva, 
+    ako je potrebno ukljucuje scroll ako ne onda je na visible po defaultu*/
+/* } */
+.container{
+    height: 500px;
+    width: 600px;
+    display: flex;
+    
+    background-color: aliceblue;
+    overflow-x: scroll;
+}
+.el{
+    flex-shrink: 0;
+    flex-basis: 300px;
+    width: 400px;
+    height: 300px;
+}
+.m1{
+    background-color: aqua;
+}
+.m2{
+    background-color: beige;
+}
+.m3{
+    background-color: black;
+}
+.m4{
+    background-color: aquamarine;
+}
+.m5{
+    background-color: brown;
+}
+.m6{
+    background-color: blue;
+}
+.m7{
+    background-color: beige;
+}
+.container2{
+    float: left;
+}
+/*RGBA boja A je opacity*/
+.opacity{
+    background-color: rgb(247, 247, 9, 0.2);
+}
