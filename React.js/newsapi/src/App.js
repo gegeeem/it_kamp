@@ -14,7 +14,7 @@ function App() {
         Home
       </NavLink>
       <NavLink label="login" to="/about/login">
-        Loginnn
+        Login
       </NavLink>
       <NavLink label="About" to="/about">
         About
