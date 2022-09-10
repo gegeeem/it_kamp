@@ -13,6 +13,9 @@ function App() {
       <NavLink label="Home" to="/">
         Home
       </NavLink>
+      <NavLink label="login" to="/about/login">
+        Login
+      </NavLink>
       <NavLink label="About" to="/about">
         About
       </NavLink>
