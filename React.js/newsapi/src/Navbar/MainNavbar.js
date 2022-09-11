@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
+import HomePage from "../components/HomePage/HomePage";
+import { NavLink } from "@mantine/core";
 
-export default function Demo() {
-  const location = useLocation();
+export default function MainNavbar() {
+  const location = useLocation("/");
   return (
     <>
       <NavLink
         label="Home"
-        component={Link}
+        component={<HomePage />}
         to="/"
         active={location.pathname === "/"}
       />

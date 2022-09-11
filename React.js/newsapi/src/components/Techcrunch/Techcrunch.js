@@ -1,10 +1,9 @@
 import Demo from "../Card/Card";
-import "./Homepage.css";
 
-export default function HomePage({ bitocin, funcState }) {
+export default function Techcrunch({ techcrunch, funcState }) {
   return (
-    <ul className="list-name">
-      {bitocin.map((el, i) => (
+    <ul className="list-main">
+      {techcrunch.map((el, i) => (
         <li key={i}>
           <Demo img={el.urlToImage} title={el.title} desc={el.author} />
         </li>
