@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ListOfArticles from "./components/ListOfArticles/ListOfArticles";
-import { Routes, Route, NavLink, Link } from "react-router-dom";
-import { Navbar } from "@mantine/core";
+import { Routes, Route, Link } from "react-router-dom";
+import { NavLink, Navbar } from "@mantine/core";
 import HomePage from "./components/HomePage/HomePage";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1>Welcome to React Router!</h1>
       {/* <Navbar /> */}
-      <NavLink label="Home" to="/">
+      {/* <NavLink label="Home" to="/">
         Home
       </NavLink>
       <NavLink label="login" to="/about/login">
@@ -18,7 +18,11 @@ function App() {
       </NavLink>
       <NavLink label="About" to="/about">
         About
-      </NavLink>
+      </NavLink> */}
+      {/* <NavLink href="/" label="Home" to="/"></NavLink>
+      <NavLink href="/about" label="About"></NavLink> */}
+      <Navbar ></Navbar>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="about" element={<h2>About</h2>} />
