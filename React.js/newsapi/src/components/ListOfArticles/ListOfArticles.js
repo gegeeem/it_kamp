@@ -21,6 +21,7 @@ export default function ListOfArticles() {
   });
   const [page, setPage] = useState(1);
   const [category, setCategory] = useState("bitcoin");
+  const [activeLink, setActiveLink] = useState("filled");
 
   function getData(ctg) {
     try {
@@ -52,6 +53,7 @@ export default function ListOfArticles() {
               setPage(1);
             }}
             name="Bitcoin"
+            variant={category === "bitcoin" ? "light" : "subtle"}
           />
         </NavLink>
         <NavLink label="tesla" to="/tesla">
@@ -61,6 +63,7 @@ export default function ListOfArticles() {
               setPage(1);
             }}
             name="Tesla"
+            variant={category === "tesla" ? "light" : "subtle"}
           />
         </NavLink>
         <NavLink label="TechCrunch" to="/techcrunch">
@@ -70,6 +73,7 @@ export default function ListOfArticles() {
               setPage(1);
             }}
             name="Techcrunch"
+            variant={category === "techcrunch" ? "light" : "subtle"}
           />
         </NavLink>
       </div>
