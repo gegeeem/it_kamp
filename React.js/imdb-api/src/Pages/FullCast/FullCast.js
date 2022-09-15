@@ -3,25 +3,25 @@ import React, { useEffect, useState } from "react";
 import CardMovie from "../../components/CardMovie/CardMovie";
 import { Navigate, useNavigate } from "react-router-dom";
 
-const API_KEY = "k_pkwn34ei";
-const BASE_URL = "https://rickandmortyapi.com/api/episode";
+const API_KEY = "k_ndf92doz";
+const BASE_URL = "https://imdb-api.com/en/API/SearchMovie";
 
 export default function FullCast() {
   const [data, setData] = useState([]);
   const [text, setText] = useState("");
-  const [name, setName] = useState("");
+  const [keyword, setKeyWord] = useState("");
 
   const navigate = useNavigate();
 
-  const getData = async (url, name) => {
-    const results = await axios.get(`${url}/?name=${name}`);
+  const getData = async (url, key, keyword) => {
+    const results = await axios.get(`${url}/${key}/${keyword}`);
     console.log(results.data.results);
     setData(results.data.results);
     console.log("pozvana fja");
   };
   useEffect(() => {
-    getData(BASE_URL, name);
-  }, [name]);
+    getData(BASE_URL, API_KEY, keyword);
+  }, [keyword]);
   return (
     <>
       <h2>FullCast Page</h2>
@@ -35,32 +35,23 @@ export default function FullCast() {
       ></input>
       <button
         onClick={() => {
-          setName(text);
+          setKeyWord(text);
           setText("");
-          console.log(name);
+          console.log(keyword);
         }}
       >
         Search
       </button>
       <div className="movies">
-        {data.map((el) => (
-          <div className="container">
-            <CardMovie
-              key={el.id}
-              id={el.id}
-              name={el.name}
-              img={el.image}
-              title={el.species}
-              func={() => {
-                navigate(`/fullcast/${el.id}`);
-              }}
-            />
-          </div>
-
-          //   <div key={el.id}>
-          //     {" "}
-          //     name: {el.name} status:{el.status}
-          //   </div>
+        {data?.map((el) => (
+          // <div>{el.title}</div>
+          <CardMovie
+            key={el.id}
+            img={el.image}
+            title={el.title}
+            desc={el.description}
+            func={() => navigate(`/fullcast/${el.id}`)}
+          />
         ))}
       </div>
     </>

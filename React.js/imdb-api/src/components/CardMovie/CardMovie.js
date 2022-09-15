@@ -1,17 +1,11 @@
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import "./CardMovies.css";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
-
-export default function CardMovie({ img, title, desc }) {
+export default function CardMovie({ img, title, desc, func }) {
   const { id } = useParams();
   const [singleMovie, setSingleMovie] = useState({});
-
-  const getData = async (url, id) => {
-    const res = await axios.get(`${BASE_URL}/${id}`);
-    // setSingleMovie(res.data)
-    console.log(res);
-  };
 
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder className="card-container">
@@ -27,7 +21,7 @@ export default function CardMovie({ img, title, desc }) {
       </Group>
 
       <Text size="sm" color="dimmed">
-        author: {desc}
+        description: {desc}
       </Text>
 
       {/* <Button variant="light" color="blue" fullWidth mt="md" radius="md">
@@ -39,6 +33,7 @@ export default function CardMovie({ img, title, desc }) {
         fullWidth
         mt="md"
         radius="md"
+        onClick={func}
       ></Button>
     </Card>
   );
