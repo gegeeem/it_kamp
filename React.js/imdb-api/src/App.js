@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, NavLink, Link } from "react-router-dom";
+import CardMovie from "./components/CardMovie/CardMovie";
+import logo from "./logo.svg";
+import { DoubleNavbar, NavbarNested } from "./NavBar-mantine/NavBarMantine";
+import FullCast from "./Pages/FullCast/FullCast";
+import HomePage from "./Pages/HomePage/HomePage";
+import SingleMovieInfo from "./Pages/SingleMovieInfo/SingleMovieInfo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Navbar">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/fullcast">FullCast</NavLink>
+      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/fullcast" element={<FullCast />} />
+        <Route path="/fullcast/:id" element={<SingleMovieInfo />} />
+      </Routes>
     </div>
   );
 }
