@@ -19,9 +19,9 @@ export default function FullCast() {
     setData(results.data.results);
     console.log("pozvana fja");
   };
-  useEffect(() => {
-    getData(BASE_URL, API_KEY, keyword);
-  }, [keyword]);
+  // useEffect(() => {
+  //   getData(BASE_URL, API_KEY, keyword);
+  // }, [keyword]);
   return (
     <>
       <h2>FullCast Page</h2>

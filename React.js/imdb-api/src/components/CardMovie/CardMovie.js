@@ -34,7 +34,9 @@ export default function CardMovie({ img, title, desc, func }) {
         mt="md"
         radius="md"
         onClick={func}
-      ></Button>
+      >
+        more
+      </Button>
     </Card>
   );
 }
