@@ -16,12 +16,12 @@ function App() {
   const location = useLocation();
   return (
     <div className="App">
-      <Navbar isBordered variant="sticky">
+      <Navbar isBordered variant="sticky" >
         <Navbar.Brand css={{ mr: "$4" }}>
           <AcmeLogo />
-          <Text b color="inherit" css={{ mr: "$11" }} hideIn="xs">
+          {/* <Text b color="inherit" css={{ mr: "$11", 'backgroundColor':'' }} hideIn="xs">
             IMDB
-          </Text>
+          </Text> */}
           <Navbar.Content hideIn="xs" variant="highlight">
             <Navbar.Link isActive={location.pathname === "/" && true} href="/">
               Movies

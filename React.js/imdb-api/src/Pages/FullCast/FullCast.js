@@ -6,6 +6,8 @@ import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
 import wars from "./war.json";
 import paginationFunc from "../../PaginationFunction/paginationFunc";
+import PaginationForItems from "../../components/Pagination/PaginationForItems";
+import { Pagination } from "@mantine/core";
 
 const API_KEY = "k_ndf92doz";
 const BASE_URL = "https://imdb-api.com/en/API/AdvancedSearch";
@@ -17,6 +19,8 @@ export default function FullCast() {
   const [page, setPage] = useState(1);
 
   const navigate = useNavigate();
+  const step = 6;
+  const numberOfPages = Math.ceil(wars.results.length / step);
 
   const getData = async (url, key, keyword) => {
     const results = await axios.get(
@@ -32,16 +36,26 @@ export default function FullCast() {
   // }, [keyword]);
   return (
     <>
-      <h2>FullCast Page</h2>
-      <SearchBar
-        funcOnChange={(e) => {
-          setText(e.target.value);
-        }}
-        fncOnClc={() => {
-          setKeyWord(text);
-          setText("");
-        }}
-      />
+      <Container
+        display="flex"
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+        <SearchBar
+          funcOnChange={(e) => {
+            setText(e.target.value);
+          }}
+          fncOnClc={() => {
+            setKeyWord(text);
+            setText("");
+          }}
+        />
+        <Text h2 color="primary">
+          Results for: "{keyword}"
+        </Text>
+      </Container>
+
       {/* <input
         type="text"
         onChange={(e) => {
@@ -91,6 +105,33 @@ export default function FullCast() {
             func={() => navigate(`/fullcast/${el.id}`)}
           />
         ))} */}
+        {paginationFunc(wars.results, step, page)?.map((el) => (
+          // <div>{el.title}</div>
+          <CardMovie
+            key={el.id}
+            img={el.image}
+            title={el.title}
+            desc={el.description}
+            func={() =>
+              navigate(`/fullcast/${el.id}`, {
+                state: {
+                  imgUrl: el.image,
+                },
+              })
+            }
+          />
+        ))}
+      </Container>
+      <Container justify="center" display="flex">
+        <Pagination
+          page={page}
+          total={numberOfPages}
+          onChange={setPage}
+          onClick={() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }}
+        />
       </Container>
     </>
   );
