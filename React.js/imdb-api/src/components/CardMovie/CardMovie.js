@@ -10,7 +10,7 @@ export default function CardMovie({ img, title, desc, func }) {
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder className="card-container">
       <Card.Section>
-        <Image src={img} height={400} alt={title} />
+        <Image fit={"contain"} src={img} height={400} alt={title} />
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">

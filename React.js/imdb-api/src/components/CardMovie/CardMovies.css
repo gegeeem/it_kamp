@@ -1,5 +1,7 @@
 .card-container{
-    width:400px;
-    height: 100%;
+    width:350px;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: rgb(245, 246, 247);
     }
-    
+   

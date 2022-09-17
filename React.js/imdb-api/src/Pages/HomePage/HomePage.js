@@ -15,9 +15,9 @@ export default function HomePage() {
     setData(results.data.results);
     console.log("pozvana fja");
   };
-  useEffect(() => {
-    getData(BASE_URL, API_KEY, keyword);
-  }, [keyword]);
+  // useEffect(() => {
+  //   getData(BASE_URL, API_KEY, keyword);
+  // }, [keyword]);
   return (
     <>
       <input
