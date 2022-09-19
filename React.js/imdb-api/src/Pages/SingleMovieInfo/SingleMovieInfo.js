@@ -1,14 +1,14 @@
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
-
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./SingleMovieInfo.css";
 import UserInfo from "./UserInfo";
-import { Grid } from "@nextui-org/react";
+import { Grid, Text, Container, Image } from "@nextui-org/react";
+import movieDetail from "./Movie.json";
+import Footer from "../../components/Footer/Footer";
 
 const BASE_URL = "https://imdb-api.com/en/API/FullCast";
-const API_KEY = "k_pkwn34ei";
+const API_KEY = "k_ndf92doz";
 
 export default function CardMovie() {
   const { id } = useParams();
@@ -21,6 +21,7 @@ export default function CardMovie() {
     setSingleMovie(res.data);
     console.log("single movie data", res.data);
     console.log(location.state.imgUrl);
+    console.log("setSingleMovie", singleMovie);
   };
   useEffect(() => {
     getData(BASE_URL, API_KEY, id);
@@ -28,7 +29,8 @@ export default function CardMovie() {
 
   return (
     <>
-      <h2>
+      {console.log("from console in return", singleMovie)}
+      {/* <h2>
         <button
           onClick={() => {
             navigate(-1);
@@ -36,12 +38,35 @@ export default function CardMovie() {
         >
           Back
         </button>
-      </h2>
-      <h2>Title: {singleMovie.title}</h2>{" "}
-      {/* <div>
-        <img src={location.state.imgUrl} />
-      </div> */}
-      <Grid.Container>
+      </h2> */}
+      {/* <img src={location.state.imgUrl} />
+      Title: {singleMovie?.title}
+      Year: {singleMovie?.year}
+      Directors:
+      {singleMovie.directors.items?.map((el) => el.name)} */}
+      <Grid.Container style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+        <Grid xs={6}>
+          <Image width={320} objectFit="contain" src={location.state.imgUrl} />
+        </Grid>
+        <Grid xs={6} style={{ display: "flex", flexDirection: "column" }}>
+          <Text h2 color="primary">
+            Title: {singleMovie.title}
+          </Text>
+          <Text h4>Year: {singleMovie.year}</Text>
+          <Text h8>
+            Directors:{" "}
+            {singleMovie.directors?.items?.map((el) => (
+              <>{el.name}</>
+            ))}
+          </Text>
+        </Grid>
+        <Grid
+          xs={12}
+          justify="center"
+          style={{ borderBottom: "2px solid gray", marginBottom: "10px" }}
+        >
+          <Text h2>Actors</Text>
+        </Grid>
         {singleMovie.actors?.slice(0, 10).map((el) => (
           // <div key={el.id}>
           //   <img
@@ -63,6 +88,7 @@ export default function CardMovie() {
           </Grid>
         ))}
       </Grid.Container>
+      <Footer />
     </>
   );
 }

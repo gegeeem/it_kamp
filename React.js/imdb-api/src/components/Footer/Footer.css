@@ -1,0 +1,14 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(225, 225, 236);
+    height: 100px;
+    border-top: 1px solid rgb(201, 195, 195);
+    border-bottom: 1px solid rgb(201, 195, 195);
+    margin-top: 5px;
+}
+.footer>span{
+    display: block;
+    color: rgb(162, 184, 204)
+}

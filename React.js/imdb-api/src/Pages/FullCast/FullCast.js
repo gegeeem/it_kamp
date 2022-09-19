@@ -8,6 +8,7 @@ import wars from "./war.json";
 import paginationFunc from "../../PaginationFunction/paginationFunc";
 import PaginationForItems from "../../components/Pagination/PaginationForItems";
 import { Pagination } from "@mantine/core";
+import Footer from "../../components/Footer/Footer";
 
 const API_KEY = "k_ndf92doz";
 const BASE_URL = "https://imdb-api.com/en/API/AdvancedSearch";
@@ -113,7 +114,7 @@ export default function FullCast() {
             title={el.title}
             desc={el.description}
             func={() =>
-              navigate(`/fullcast/${el.id}`, {
+              navigate(`/${el.id}`, {
                 state: {
                   imgUrl: el.image,
                 },
@@ -133,6 +134,7 @@ export default function FullCast() {
           }}
         />
       </Container>
+      <Footer />
     </>
   );
 }

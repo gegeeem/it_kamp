@@ -5,3 +5,17 @@ height: 80px;
 width: 80px;
 margin-bottom: -10px;
 }
+.containerOFImg{
+    height: 70vh;
+}
+
+.imgOfMovie{
+    display: block;
+    height: 100%;
+    margin-left: 25px;
+}
+.movieDescription{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
