@@ -25,6 +25,7 @@ export default function CardMovie() {
   };
   useEffect(() => {
     getData(BASE_URL, API_KEY, id);
+    window.scrollTo(0, 0);
   }, [id]);
 
   return (
@@ -53,11 +54,14 @@ export default function CardMovie() {
             Title: {singleMovie.title}
           </Text>
           <Text h4>Year: {singleMovie.year}</Text>
+
           <Text h8>
             Directors:{" "}
-            {singleMovie.directors?.items?.map((el) => (
-              <>{el.name}</>
-            ))}
+            {Object.keys(singleMovie).length !== 0 ? (
+              singleMovie.directors.items?.map((el) => <>{el.name}</>)
+            ) : (
+              <>Loading</>
+            )}
           </Text>
         </Grid>
         <Grid
