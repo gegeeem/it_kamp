@@ -25,11 +25,11 @@ export function SearchBar({ funcOnChange, fncOnClc }) {
         },
         marginTop: "$8",
       }}
-      contentRight={
-        <Button size="lg" aria-label="search" auto onClick={fncOnClc}>
-          Search
-        </Button>
-      }
+      // contentRight={
+      //   <Button size="lg" aria-label="search" auto onClick={fncOnClc}>
+      //     Search
+      //   </Button>
+      // }
       placeholder="Keyword..."
       onChange={funcOnChange}
       aria-label="input"

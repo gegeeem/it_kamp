@@ -3,14 +3,22 @@ import React, { useEffect, useState } from "react";
 import CardMovie from "../../components/CardMovie/CardMovie";
 import { Navigate, useNavigate } from "react-router-dom";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
+import {
+  Container,
+  Card,
+  Row,
+  Text,
+  Col,
+  Spacer,
+  Button,
+} from "@nextui-org/react";
 import wars from "./war.json";
 import paginationFunc from "../../PaginationFunction/paginationFunc";
 import PaginationForItems from "../../components/Pagination/PaginationForItems";
 import { Pagination } from "@mantine/core";
 import Footer from "../../components/Footer/Footer";
 
-const API_KEY = "k_ndf92doz";
+const API_KEY = "k_pkwn34ei";
 const BASE_URL = "https://imdb-api.com/en/API/AdvancedSearch";
 
 export default function FullCast() {
@@ -21,7 +29,8 @@ export default function FullCast() {
 
   const navigate = useNavigate();
   const step = 6;
-  const numberOfPages = Math.ceil(wars.results.length / step);
+  // const numberOfPages = Math.ceil(wars.results.length / step);
+  const numberOfPages = Math.ceil(data.length / step);
 
   const getData = async (url, key, keyword) => {
     const results = await axios.get(
@@ -29,12 +38,12 @@ export default function FullCast() {
     );
     console.log(results);
     setData(results.data.results);
-    console.log("pozvana fja");
+    console.log("pozvana fja getData u useEffect()");
   };
-  console.log(wars);
-  // useEffect(() => {
-  //   getData(BASE_URL, API_KEY, keyword);
-  // }, [keyword]);
+  // console.log("u logici fje", data);
+  useEffect(() => {
+    getData(BASE_URL, API_KEY, keyword);
+  }, [keyword]);
   return (
     <>
       <Container
@@ -43,15 +52,30 @@ export default function FullCast() {
         justify="center"
         alignItems="center"
       >
-        <SearchBar
-          funcOnChange={(e) => {
-            setText(e.target.value);
-          }}
-          fncOnClc={() => {
-            setKeyWord(text);
-            setText("");
-          }}
-        />
+        <Row
+          display="flex"
+          justify="center"
+          align="flex-end"
+          // style={{ alignItems: "baseline" }}
+        >
+          <SearchBar
+            funcOnChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
+          <Button
+            size="lg"
+            aria-label="search"
+            auto
+            onClick={() => {
+              setKeyWord(text);
+              setText("");
+            }}
+          >
+            Search
+          </Button>
+        </Row>
+
         <Text h2 color="primary">
           Results for: "{keyword}"
         </Text>
@@ -106,7 +130,8 @@ export default function FullCast() {
             func={() => navigate(`/fullcast/${el.id}`)}
           />
         ))} */}
-        {paginationFunc(wars.results, step, page)?.map((el) => (
+        {/* {paginationFunc(wars.results, step, page)?.map((el) => ( */}
+        {paginationFunc(data, step, page)?.map((el) => (
           // <div>{el.title}</div>
           <CardMovie
             key={el.id}

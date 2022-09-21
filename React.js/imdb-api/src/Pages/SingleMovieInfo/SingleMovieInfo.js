@@ -8,9 +8,9 @@ import movieDetail from "./Movie.json";
 import Footer from "../../components/Footer/Footer";
 
 const BASE_URL = "https://imdb-api.com/en/API/FullCast";
-const API_KEY = "k_ndf92doz";
+const API_KEY = "k_pkwn34ei";
 
-export default function CardMovie() {
+export default function SingleMovieInfo() {
   const { id } = useParams();
   const [singleMovie, setSingleMovie] = useState({});
   const navigate = useNavigate();
@@ -58,7 +58,9 @@ export default function CardMovie() {
           <Text h8>
             Directors:{" "}
             {Object.keys(singleMovie).length !== 0 ? (
-              singleMovie.directors.items?.map((el) => <>{el.name}</>)
+              singleMovie.directors.items?.map((el) => (
+                <span key={el.id}>{el.name}</span>
+              ))
             ) : (
               <>Loading</>
             )}

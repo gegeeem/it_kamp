@@ -3,7 +3,15 @@ import React, { useEffect, useState } from "react";
 import CardMovie from "../../components/CardMovie/CardMovie";
 import { Navigate, useNavigate } from "react-router-dom";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
+import {
+  Container,
+  Card,
+  Row,
+  Text,
+  Col,
+  Spacer,
+  Button,
+} from "@nextui-org/react";
 import starWars from "./starWars.json";
 import paginationFunc from "../../PaginationFunction/paginationFunc";
 import PaginationForItems from "../../components/Pagination/PaginationForItems";
@@ -43,15 +51,29 @@ export default function Series() {
         justify="center"
         alignItems="center"
       >
-        <SearchBar
-          funcOnChange={(e) => {
-            setText(e.target.value);
-          }}
-          fncOnClc={() => {
-            setKeyWord(text);
-            setText("");
-          }}
-        />
+        <Row
+          display="flex"
+          justify="center"
+          align="flex-end"
+          // style={{ alignItems: "baseline" }}
+        >
+          <SearchBar
+            funcOnChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
+          <Button
+            size="lg"
+            aria-label="search"
+            auto
+            onClick={() => {
+              setKeyWord(text);
+              setText("");
+            }}
+          >
+            Search
+          </Button>
+        </Row>
         <Text h2 color="primary">
           Results for: "{keyword}"
         </Text>

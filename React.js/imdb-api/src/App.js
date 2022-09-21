@@ -9,7 +9,7 @@ import SingleMovieInfo from "./Pages/SingleMovieInfo/SingleMovieInfo";
 import { Navbar, Text, Avatar, Dropdown, Input } from "@nextui-org/react";
 import { AcmeLogo } from "./components/NavBar/AcmeLogo.js";
 import { SearchIcon } from "./components/NavBar/SearchIcon.js";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Series from "./Pages/Series/Series";
 
 function App() {
